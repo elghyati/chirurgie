@@ -1,0 +1,3 @@
+# translations/messages.fr.yaml
+error.404.title: "Page non trouvée"
+error.404.message: "Désolé, la page que vous cherchez n'existe pas."

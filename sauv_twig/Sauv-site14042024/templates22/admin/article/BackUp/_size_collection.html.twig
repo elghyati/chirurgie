@@ -1,0 +1,18 @@
+{% block _admin_article_sizes_widget %}
+    {{ form_widget (form) }}
+    <input type="hidden" id="widgets-sizes-counter" value="0">
+    <div class="form-group">
+        <button type="button" id="add-size" class="btn btn-primary"><i class="fa fa-plus"></i> Ajouter une taille</button>        
+    </div>
+
+{% endblock %}
+{% block _admin_article_sizes_entry_row %}
+    <div class="form-group" id="block_{{id}}">
+        {{ form_widget (form) }}
+    </div>
+{% endblock %}
+{% block _admin_article_sizes_entry_widget %}
+    <div class="ml-2">
+        {{ form_widget(form.size)}}
+        <button type="button" data-action="delete" data-target="#block_{{id}}"  class="btn btn-danger" style="margin-left: 0px"><i class="fas fa-times"></i></button>            </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Liste des clients{% endblock %}
+
+{% block body %}
+    <div>
+        <h1 >Ajouter un client</h1>
+        {#        {{ form_start(formClient) }}
+                        {{ form_row(formClient.,{'attr':{'place holder':""}}) }}
+                        {{ form_row(formClient.,{'attr':{'place holder':""}}) }}
+                        {{ form_row(formClient.,{'attr':{'place holder':""}}) }}
+                        {{ form_row(formClient.,{'attr':{'place holder':""}}) }}
+                        {{ form_row(formClient.,{'attr':{'place holder':""}}) }}
+        {{ form_end(formClient) }}
+        <button type="submit" class="btn btn-success">Enregistrer</button>
+        #}
+        {{ form(formSousFamille) }}
+    </div>
+
+
+{% endblock %}

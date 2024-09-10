@@ -1,0 +1,43 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Ajouter parametre des promotions{% endblock %}
+
+{% block body %}*
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Administration des promotions</h4>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ path('admin_dashboard_index') }}">ChirurgieMed</a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="{{ path('admin_promotionsetting_index') }}">Parametrages</a></li>
+                            <li class="breadcrumb-item active">Création</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="page-content-wrapper">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card m-b-20">
+                            <div class="card-body">
+                                <h4 class="mt-0 header-title">Créer un parametre des promotions</h4>
+                                {{ include('admin/promotion_setting/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+                                <div class="form-inline align-items-lg-center my-3">
+                                    <a class="btn btn-success mr-3" href="{{ path('admin_promotionsetting_index') }}"><i
+                                                class="fas fa-chevron-left"></i> Retour à la liste</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+            </div>
+            <!-- end page content-->
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+{% endblock %}
+

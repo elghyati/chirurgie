@@ -1,0 +1,66 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Modification de la sous-famille : {{ sous_famille.sousFamille }} !{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Administration des sous-familles</h4>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ path('admin_dashboard_index') }}">ChirurgieMed</a></li>
+                            <li class="breadcrumb-item"><a href="{{ path('admin_sous_famille_index') }}">Sous-Familles</a></li>
+                            <li class="breadcrumb-item active">Edition</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+            <div class="page-content-wrapper">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card m-b-20">
+                            <div class="card-body">
+                                <h4 class="mb-3 header-title">Modification de '{{ sous_famille.sousFamille }}'</h4>
+                                {{ include('admin/sous_famille/_form.html.twig', {'button_label': 'Enregistrer les modifications'}) }}
+                                <div class="form-inline align-items-lg-center my-3">
+                                    <a class="btn btn-success mr-3" href="{{ path('admin_sous_famille_index') }}"><i class="fas fa-chevron-left"></i> Retour à la liste</a>
+                                    {{ include('admin/sous_famille/__delete_form.html.twig') }}
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+            </div>
+            <!-- end page content-->
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+
+{% endblock %}
+{% block javascripts %}
+    <script>
+        $(document).ready(function () {
+            $('select').select2();
+        });
+        $('#admin_sous_famille_imageFile').on('change', function () {
+            //get the file name
+            var fileName = $(this).val();
+            //replace the "Choose a file" label
+            $(this).next('.custom-file-label').html(fileName);
+        {#            filePreview(this);#}
+            })
+        {#        function filePreview(input) {
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $('#uploadForm + img').remove();
+                            $('#uploadForm').after('<img src="' + e.target.result + '" width="auto" height="auto"/>');
+                        }
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+        #}
+    </script>
+{% endblock %}

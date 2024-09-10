@@ -1,0 +1,293 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panier
+{% endblock %}
+
+{% block body %}
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Panier</h2>
+                    <ul class="breadcrumb">
+                        {#                        <li class="breadcrumb-item"><a href="#">Shop</a></li>#}
+                        <li class="breadcrumb-item active">Cart</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% for label, messages in app.flashes %}
+        <div class="alert alert-{{label}}">
+            {% for  message in messages %}
+                <p>{{ message |raw }}</p>
+            {% endfor %}
+        </div>
+    {% endfor %}
+    <!-- End All Title Box -->
+    {% if items | length>0 %}
+
+        {#
+            <div>
+                <a class="test_jason" href="{{ path('cart_add',{'id':items[0].article.id}) }}"> test jason</a>
+            </div>
+        #}
+        <!-- Start Cart  -->
+
+        <div class="cart-box-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="table-main table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        {# <th>Référence</th> #}
+                                        <th></th>
+                                        <th>Article</th>
+                                            {# {% if app.user %} #}
+                                            <th>Prix HT</th>
+                                            <th>Remise</th>
+                                            <th>Quantité</th>
+                                            <th>Total</th>
+                                            {# {% endif %} #}
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for item in items %}
+                                        <tr>
+                                            {#<form action="{{ path('cart_add',{'id':item.article.id}) }}" method="get">#}
+                                            {# <form action="{% set item.quantity =item.quantity+1 %} {{ item.quantity }}" method="post">#}
+                                            {# <td class="price-pr"> #}
+                                                {# <p>{{ item.article.reference }}</p> #}
+                                                {# {{ item.article.reference }}#}
+                                            {# </td> #}
+                                            <td class="thumbnail-img price-pr">
+                                               <p>{{ item.article.reference }}</p><br>
+                                                <a href="#">
+                                                    <img class="img-fluid" src="{{ asset('uploads/images/articles/' ~ item.article.coverImage) }}" alt="reference" />
+                                                </a>
+                                            </td>
+                                            <td class="name-pr">
+                                                <a href="{{ path('article_detail',{'id':item.article.id})}}">
+                                                    {{ item.article.designation }}
+                                                </a>
+                                            </td>
+                                            {# {% if app.user %} #}
+                                                <td class="price-pr">
+                                                    <p>{{ item.article.price|number_format(2, ',', ' ')}}</p>
+                                                </td>
+                                                <td class="price-pr">
+                                                    <p>0</p>
+                                                </td>
+                                                <td class="quantity-box">
+                                                    {#<input id="quantity" name="quantity" type="number" sizerequest="4" onchange="this.form.submit()" value="{{ item.quantity }}" min="0" step="1" class="c-input-text qty text">#}
+                                                    <input id="quantity" name="quantity" data-path="{{ path('cart_add',{'id':item.article.id}) }}" type="number" sizerequest="4" value="{{ item.quantity }}" min="1" step="1" class="c-input-text qty text">
+                                                </td>
+                                                <td class="total-pr">
+                                                    <p>{{ (item.article.price * item.quantity)|number_format(2, ',', ' ')}}</p>
+                                                </td>
+                                            {# {% endif %} #}
+                                            <td class="remove-pr">
+                                                <a id="remove_article" data-path= "{{ path('cart_remove',{'id':item.article.id}) }}">
+                                                    {# <i class="fas fa-times"></i>#}
+                                                    <i  class="fas fa-trash"></i>
+                                                </a>
+                                            </td>
+                                            {#</form>#}
+                                        </tr>
+                                    {% endfor %}                      
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                        <div class="col-lg-4 col-sm-12 cmd-bag">
+                           <h3 class="recap-cmd card-pan">Détail de la commande</h3>
+                            <div class="order-box">
+                                
+                                <div class="d-flex">
+                                    <h4>Sub Total</h4>
+                                    <div class="ml-auto font-weight-bold"> {{ total|number_format(2, ',', ' ')}} </div>
+                                </div>
+                                <div class="d-flex">
+                                    <h4>Remise (2%)</h4>
+                                    <div class="ml-auto font-weight-bold"> {{ (total * 0.02)|number_format(2, ',', ' ')}} </div>
+                                </div>
+                                <hr class="my-1">
+                                <div class="d-flex">
+                                    <h4>Remise de coupon</h4>
+                                    <div class="ml-auto font-weight-bold">  </div>
+                                </div>
+                                <div class="d-flex">
+                                    <h4>TVA (20%)</h4>
+                                    <div class="ml-auto font-weight-bold">  {{ ((total* 0.02) * 1.2)|number_format(2, ',', ' ') }}  </div>
+                                </div>
+                                <div class="d-flex">
+                                    <h4>Port</h4>
+                                    <div class="ml-auto font-weight-bold"> Gratuit </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex gr-total">
+                                    <h5>Total à payer</h5>
+                                    <div class="ml-auto h5"> {{(total +((total* 0.02) * 1.2))|number_format(2, ',', ' ')}}  </div>
+                                </div>
+                                <hr> 
+                            </div>
+                        </div>
+                </div>
+
+                <div class="row my-5">
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="coupon-box">
+                            {#<div class="input-group input-group-sm">
+                                <input class="form-control" placeholder="Entrer le code coupon" aria-label="Coupon code" type="text">
+                                <div class="input-group-append">
+                                    <button class="btn btn-theme" type="button">Remise de Coupon</button>
+                                </div>
+                            </div>#}
+                        </div>
+                    </div>
+                    {# {% if app.user %} #}
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="update-box">
+                                <form action="{{ path('cart_index') }}">
+                                    <input value="Réactualiser le panier" type="submit">
+                                </form>
+                                {# <a href="{{ path('cart_index') }}" type="submit">Réactualiser le panier</a>#}
+                            </div>
+                        </div>
+                    {# {% endif %} #}
+                </div>
+
+                <div class="row my-5">
+                    <div class="col-lg-8 col-sm-12"></div>
+                    {# {% if app.user %} #}
+                        <div class="col-12 d-flex shopping-box"><a href="{{path('cart_validate') }}" class="ml-auto btn hvr-hover">Valider la commande</a> </div>
+                    {# {% else %}
+                        <div class="col-12 d-flex shopping-box"><a href="{{path('cart_PriceRequest_validate') }}" class="ml-auto btn hvr-hover">Valider la demande de prix</a> </div>
+                    {% endif %} #}
+                </div>
+
+            </div>
+        </div>
+        <!-- End Cart -->
+
+        {#
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Référence</th>
+                    <th>Désignation</th>
+                    <th>Quantité</th>
+                    <th>PU HT</th>
+                    <th>Total HT</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in items %}
+                    <tr>
+                        <td>{{ item.article.reference }}</td>
+                        <td>{{ item.article.designation }}</td>
+                        <td class="text-right">{{ item.quantity }}</td>
+                        <td class="text-right">{{ item.article.price}}</td>
+                        <td class="text-right">{{ item.article.price * item.quantity}}</td>
+                        <td>
+                            <a href="{{ path('cart_remove',{'id':item.article.id}) }}" class="btn btn-danger btn-sm">
+                                <i class ="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+    
+            <tfoot>
+                <tr>
+                    <td colspan="4" class="text-right">Total : </td>
+                    <td class="text-right">{{ total }}</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        #}
+    {% else %}    
+        <div class="contact-box-main">
+            <div class="container">
+                <h2 class="text-danger">Ce panier est vide !</h2>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+{% block javascripts %}
+    <script>
+        function onChangeQuantity(event) {
+        {# event.preventDefault();
+            console.log(this.link + " " + this.value + " " + this.parentNode.parentNode);#}
+        {#                    console.log(this.value);#}
+                var qte = this.value;
+        {# var $url = "{{ path('cart_add',{'id':2}) }}";#}
+                var $url = $(this).attr("data-path");
+        {#                console.log($url);#}
+                $.ajax({
+                    type: "POST",
+                    url: $url,
+                    cache: true,
+                    data: {quantity: qte},
+                    success: function (data) {
+                        CartPreview(data);
+        {# console.log(data);#}
+        {# $('#data').html(CartPreview(data));#}
+                        event.preventDefault();
+                    }
+                });
+            }
+            function onRemoveArticle(event) {
+                var $url = $(this).attr("data-path");
+                var $trArticle = $(this).parent().parent();
+                console.log($trArticle);
+                $.ajax({
+                    type: "POST",
+                    url: $url,
+                    cache: true,
+                    success: function (data) {
+                        CartPreview(data);
+        {#$('#data').html(CartPreview(data));#}
+
+                        $trArticle.css("background", "#ff6666");
+        {#                        $trArticle.animate({
+                                    height: "0px"
+                                }, 1000, function () {
+                                    $trArticle.empty();
+                                    $trArticle.remove();
+                                });
+        #}
+                        $trArticle
+                                .find('td')
+                                .wrapInner('<div style="display: none;" />')
+                                .parent()
+                                .find('td > div')
+                                .slideDown(1, function () {})
+                                .slideUp(500, function () {
+                                    $trArticle.empty();
+                                    $trArticle.remove();
+                                    console.log("Ligne supprimée !");
+                                    event.preventDefault();
+                                });
+                    }
+                });
+            }
+            $(document).ready(function () {
+                document.querySelectorAll('#quantity').forEach(function (input) {
+                    {#input.addEventListener('change', onChangeQuantity);#}
+                    input.addEventListener('blur', onChangeQuantity);
+                });
+                document.querySelectorAll('#remove_article').forEach(function (link) {
+                    link.addEventListener('click', onRemoveArticle);
+                });
+            });
+
+    </script>
+{% endblock %}
+

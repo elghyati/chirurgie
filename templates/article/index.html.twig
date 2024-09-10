@@ -1,0 +1,49 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Liste des articles{% endblock %}
+
+{% block body %}
+    <div>
+        <h1 class="">Liste des articles</h1>
+    </div>
+    <hr />
+    <p class="badge-danger">En cours de conception</p>
+    <br />
+    <div class="table-responsive">
+        {#        <table class="table  table-striped  table-hover">#}
+        <table class="table  table-hover">
+            <thead class="table-dark">
+            <th>Réference</th>
+            <th>Désignation</th>
+            <th>Image</th>
+                {% if app.user %}
+                <th>PU HT</th>
+                {% endif %}
+            <th>Sous-Famille</th>
+                {#            <th>Descriptions</th>#}
+            <th>Similitude</th>
+            </thead>
+            <tbody>
+                {% for article in articles %}
+                    <tr border-bottom>
+                        <td> {{ article.reference }}</td>
+                        <td> {{ article.designation }}</td>
+                        {# <td> {{ article.coverImage }}</td> #}
+                        <td> <img src="{{ asset('uploads/images/articles/' ~ article.coverImage) }}" width="40px" height="40px"> </td>
+                            {% if app.user %}
+                            <td> {{ article.price }}</td>
+                        {% endif %}
+                        <td> {{ article.sousFamille }}</td>
+                        {# <td> {{ article.descriptions }}</td>#}
+                        <td> {{ article.Similitude }}</td>
+                        <td>
+                            <a class="btn btn-primary" href="{{ path('article_edit', {id: article.id}) }}">edit</a>
+                            <a class="btn btn-danger" href="{{ path('article_delete', {id: article.id}) }}">delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="btn btn-success" href="{{ path('article_create') }}" style="margin-top: 15px;">Ajout article</a>
+    </div>
+{% endblock %}

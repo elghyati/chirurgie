@@ -1,0 +1,11 @@
+
+<IfModule !mod_rewrite.c>
+    <IfModule mod_alias.c>
+        # When mod_rewrite is not available, we instruct a temporary redirect of
+        # the start page to the front controller explicitly so that the website
+        # and the generated links can still be used.
+        RedirectMatch 307 ^/$ /public/index.php/
+        # RedirectTemp cannot be used instead
+php_value session.save_path /home/username/public_html/tmp
+    </IfModule>
+</IfModule>

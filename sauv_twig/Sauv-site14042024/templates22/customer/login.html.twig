@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- TemplateBeginEditable name="doctitle" -->
+        <title>{% block title %}Chirurgie Med{% endblock %}</title>
+        <!-- TemplateEndEditable -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Site Metas -->
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Site Icons -->
+        <link rel="shortcut icon" href="{{ asset('admin/images/favicon.ico')}}">
+        {#<link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png')}}">#}
+
+        <!-- Site Icons -->
+        <link rel="shortcut icon" href="admin/images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <!-- Site CSS -->
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ asset('css/custom.css') }}">     
+        <!-- FontAwsome CSS -->
+        <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+        {#        <link rel="stylesheet" href="{{ asset('css/all.min.css') }}"/>#}
+        <link rel="stylesheet" href="{{ asset('css/all.css') }}">     
+
+
+        {% block stylesheets %}{% endblock %}
+    </head>
+
+    {# <body style="background-image: url({{asset('admin/images/logo.png')}});  background-repeat: no-repeat; background-size: cover; ">#}
+    {# <body style="background-image: url({{asset('admin/images/pattern-white.png')}});  background-repeat: repeat;  ">#}
+    {#    <body style="background-image: radial-gradient(#2F6095, #4E9871);  background-size: cover;">#}
+    <body style="background:#2F6095;">
+        {#    <body>#}
+        <!-- Begin page -->
+        <div class="container my-5">
+            <div class="bg-white rounded w-sm w-75 m-auto">
+                {#            <div class="card w-sm w-75 m-auto">#}
+                <div class="card-header">
+                    {% if hasError %}
+                        <div class="alert alert-warning" style="color: red">Une erreur est survenue, le login ou le mot de passe est invalide</div>
+                    {% endif %}   
+                </div>
+                <div class="card-body">
+                    <h3 class="text-center m-0">
+                        <a href="{{ path('home_index') }}" class="logo logo-admin"><img src="{{ asset('admin/images/logo.png') }}" height="70" alt="logo"></a>
+                    </h3>
+                    <div class="p-3">
+                        <h4 class="text-muted font-18 m-b-5 text-center"> Chirurgie-Med</h4>
+                        <p class="text-muted text-center"><i class="fas fa-lock"></i> Connexion à l'administration.</p>
+
+                        <form class="form-horizontal m-t-30"  method="post">
+
+                            <div class="form-group">
+                                <label for="username">Email</label>
+                                <input type="text" class="form-control" id="username" placeholder="Email..." name="_username" required="true" value="{{ username }}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="userpassword">Mot de passe</label>
+                                <input type="password" class="form-control" id="userpassword" placeholder="Mot de passe..." name="_password" required="true">
+                            </div>
+
+                            <div class="form-group row m-t-20">
+                                <div class="col-6">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                        <label class="custom-control-label" for="customControlInline">Restez connecté</label>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <button class="btn btn-primary w-md waves-effect waves-light" type="submit"><i class="fas fa-lock-open"></i>  Connexion !</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group m-t-10 mb-0 row">
+                                <div class="col-12 m-t-20">
+                                    <a href="pages-recoverpw.html" class="text-muted"><i class="mdi mdi-lock"></i> Mot de passe oublié ?</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="m-t-40 text-center">
+                <p class="text-white-50">Non encore inscrit ? <a href="pages-register.html" class="text-white"> Créer un compte </a> </p>
+                <p class="text-muted" style="color: white">© 2020 Chirurgie-Med</p>
+            </div>
+
+        </div>
+    </body>

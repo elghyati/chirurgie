@@ -1,0 +1,12 @@
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{#{{ form_widget(form.famille) }}
+{{ form_widget(form.coverImage) }}
+<div class="row align-items-center">
+    <div id="uploadForm"> </div>
+    <div class="col">
+        {{ form_widget(form.imageFile) }}
+    </div>
+<div>#}
+<button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> {{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

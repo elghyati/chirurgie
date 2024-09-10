@@ -1,0 +1,20 @@
+{% block _admin_brand_widget %}
+
+    <div class="col-sm">
+        {{ form_label(form.libelle) }}
+        {{ form_widget(form.libelle) }}
+        {{ form_errors(form.libelle) }}
+    </div>
+    <div class="col-sm">
+        {{ form_label(form.imageFile) }}
+        {{ form_widget(form.imageFile) }}
+        {{ form_errors(form.imageFile) }}
+    </div>
+    <div class="col-sm">
+        {{ form_label(form.famille) }}
+        {{ form_widget(form.famille) }}
+        {{ form_errors(form.famille) }}
+    </div>
+
+
+{% endblock %}

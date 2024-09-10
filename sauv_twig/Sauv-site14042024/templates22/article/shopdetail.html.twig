@@ -1,0 +1,421 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fiche Article{% endblock %}
+
+{% block body %}
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Fiche article</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ path('article_shop')}}">{{(app.user) ? 'Boutique' : 'Demande de prix'}} </a></li>
+                        <li class="breadcrumb-item active">Fiche article</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End All Title Box -->
+
+    <!-- Start Shop Detail  -->
+    <div class="shop-detail-box-main">
+        <div class="container">
+{#            <h1 style="color: red"><pre>             P A G E    E N    C O N S T R U C T I O N  - GHYATI</pre></h1>#}
+            <div id="product" class="row">
+                <div class="col-xl-5 col-lg-5 col-md-6">
+                    <div id="carousel-images" class="single-product-slider carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active"> <img class="d-block w-100" src="{{ asset('uploads/images/articles/' ~ article.coverImage) }}" alt="Cover Image"> </div>
+                                {% for image in article.images %}
+                                <div class="carousel-item"> <img class="d-block w-100" src="{{ asset('uploads/images/articles/' ~  image.url) }}" alt=" image.caption"> </div>
+                                {% endfor %}
+                        </div>
+
+                        <a class="carousel-control-prev" href="#carousel-images" role="button" data-slide="prev"> 
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            <span class="sr-only">Previous</span> 
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-images" role="button" data-slide="next"> 
+                            <i class="fa fa-angle-right" aria-hidden="true"></i> 
+                            <span class="sr-only">Next</span> 
+                        </a>
+
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-images" data-slide-to="0" class="active">
+                                <img class="d-block w-100 img-fluid" src="{{ asset('uploads/images/articles/' ~ article.coverImage) }}" alt="" />
+                            </li>
+                            {% for image in article.images %}
+                                <li data-target="#carousel-images" data-slide-to="{{ loop.index }}">
+                                    <img class="d-block w-100 img-fluid" src="{{ asset('uploads/images/articles/' ~ image.url) }}" alt="" />
+                                </li>
+                            {% endfor %}
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-6">
+                    {# <div class="single-product-details">
+                        <h2>{{ article.designation}}</h2>
+                        {# {% if app.user %} #}
+                    {# <h5> <del>{{ (article.price * 1.2) | number_format(2, ',', ' ') }}</del> {{ article.price |number_format(2, ',', ' ') }} DH</h5> #}
+                    {# {% endif %} #}
+
+                    {#                        <p class="available-stock"><span> More than 20 available / <a href="#">8 sold </a></span><p>#}
+                    {# <h4>Déscription:</h4>
+                    <div class="single-product-description">
+                        {{ article.description|raw}}
+                    </div>
+
+                    <h4>Tailles :</h4>
+                    {% if article.sizes|length >0%}
+                        <div style="margin-left: 20px">
+                            {% for size in article.sizes %}
+                                <div class="d-inline p-2 bg-primary text-white">{{ size.size }}</div>
+                                {#                                <h5>{{ size.size }}</h5>#}
+                    {# {% endfor %}
+                </div>
+            {% else %}
+                <div style="margin-left: 20px"><h5>Taille standard</h5></div>
+            {% endif %} #}
+                    {#<p>Nam sagittis a augue eget scelerisque. Nullam lacinia consectetur sagittis. Nam sed neque id eros fermentum dignissim quis at tortor. Nullam ultricies urna quis sem sagittis pharetra. Nam erat turpis, cursus in ipsum at,
+                        tempor imperdiet metus. In interdum id nulla tristique accumsan. Ut semper in quam nec pretium. Donec egestas finibus suscipit. Curabitur tincidunt convallis arcu. </p>#}
+                    {# {% if app.user %} #}
+                    {# <ul>
+                        <li>
+                            <div class="form-group quantity-box">
+                                <label class="control-label">Quantité</label>
+                                {#                                    <input class="form-control" value="1" min="1" max="100" type="number">#}
+                    {# <input id="quantity" name="quantity" class="form-control" value="1" min="1" type="number">
+                </div>
+            </li>
+        </ul> #}
+                    {# {% endif %} #}
+
+
+                    {# <div class="price-box-bar">
+                        <div class="cart-and-bay-btn"> #}
+                    {#                                <a class="btn hvr-hover" data-fancybox-close="" href="#">Buy New</a>#}
+                    {# <a id="add_to_cart" class="btn hvr-hover text-white mt-5" data-fancybox-close="" data-path="{{ path('cart_add',{'id':article.id}) }}">Ajouter au panier</a>
+                </div>
+            </div>
+
+            <div class="add-to-btn">
+                <div class="add-comp"> #}
+                    {#<a class="btn hvr-hover" href="#"><i class="fas fa-heart"></i> Add to wishlist</a>
+                    <a class="btn hvr-hover" href="#"><i class="fas fa-sync-alt"></i> Add to Comparer</a>#}
+                    {# </div>
+                    <div class="share-bar">
+                        <a class="btn hvr-hover" href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a class="btn hvr-hover" href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a>
+                        <a class="btn hvr-hover" href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a class="btn hvr-hover" href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a>
+                        <a class="btn hvr-hover" href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>  #}
+
+                    <div class="pb-right-column">
+                        <h1 class="product-name">{{ article.designation}}</h1>
+                        <h3>Référence : <span id="articleRef">{{ article.reference}}</span></h3>
+                        <h3>Type client : <span id="customerType">{{ customerType}}</span></h3>
+                        <div class="product-comments">
+                            {# <div class="product-star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div> #}
+                            {# {% if article.sizes|length >0%}
+                                <div class="comments-advices">
+                                    {% for size in article.sizes %}
+                                        <a href="#">Based  on 3 ratings {{ size.size }}</a>
+                                        <a href="#"><i class="fa fa-pencil"></i> write a review</a> 
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                <div style="margin-left: 20px"><h5>Taille standard</h5></div>
+                            {% endif %}#}
+                        </div>
+                        <div class="product-price-group">
+                            <div class="col">
+                                {# <span id="articlePrice" class="price"> #}
+                                    {#{% if customerType == "DLR"%}
+                                        {{ article.priceDealer |number_format(2, ',', ' ') }} DH
+                                    {% elseif  customerType == "PRF"%}
+                                        {{ article.priceProfessional |number_format(2, ',', ' ') }} DH
+                                    {% else%}
+                                        {{ article.price |number_format(2, ',', ' ') }} DH
+                                    {% endif %}#}
+                                {# </span> #}
+
+                                {#<span id="articleOldPrice" class="old-price"><del>{{ (article.price * 1.2) | number_format(2, ',', ' ') }}</del></span>#}
+                                {#si le user = revendeur afficher la remise#}
+                                {% if  false %} 
+                                    <span id="articleDiscount"  class="discount">
+                                        {#{{ article.discount * 100| number_format(0) }}% inexistant#}
+                                    </span>
+                                {% endif %}
+                            </div>
+                            <div class="col">
+                                <img id="articleBrand" data-folder="{{ asset('uploads/images/brands/') }}" src="" />
+                            </div>
+                        </div>
+                        <div class="info-orther">
+                            {# <p>Item Code: #453217907</p> #}
+                            <p >Disponibilité: <span id="variantDispo" class="in-stock"></span></p>
+                                {# <p>Condition: New</p> #}
+                        </div>
+                        <div class="product-desc">
+                            {{ article.description|raw}}.
+                        </div>
+                        <div class="form-option">
+                            <p class="form-option-title">Options:</p>
+                            <div class="attributes">
+                                <div class="attribute-label">Taille:</div>
+                                <div class="m-3" attribute-list">
+                                    <ul id="divSizes" class="list-size">
+                                    </ul>
+
+                                    {#<div id="divSizes" class="m-l20 attribute-list">
+                                        <select>
+                                            <option value="1">X</option>
+                                            <option value="2">XL</option>
+                                            <option value="3">XXL</option>
+                                        </select>
+                                        {# <a id="size_chart" class="fancybox" href="assets/data/size-chart.jpg">Size Chart</a> # }
+                                    </div>#}
+
+                                </div>
+                                <div class="attributes">
+                                    <div class="attribute-label">Couleur:</div>
+                                    <div class="m-3 attribute-list">
+                                        <ul id="divColors" class="list-color">
+                                            {#<li style="background:#0c3b90;"><a href="#">red</a></li>
+                                            <li style="background:#036c5d;" class="active"><a href="#">red</a></li>
+                                            <li style="background:#5f2363;"><a href="#">red</a></li>
+                                            <li style="background:#ffc000;"><a href="#">red</a></li>
+                                            <li style="background:#36a93c;"><a href="#">red</a></li>
+                                            <li style="background:#ff0000;"><a href="#">red</a></li>#}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="attributes">
+                                    <div class="attribute-label">Quantité:</div>
+                                    <div class="attribute-list product-qty">
+                                        <div class="qty">
+                                            <input id="option-product-qty" type="text" value="1">
+                                        </div>
+                                        <div class="btn-plus">
+                                            <a href="#" class="btn-plus-up">
+                                                <i class="fa fa-caret-up"></i>
+                                            </a>
+                                            <a href="#" class="btn-plus-down">
+                                                <i class="fa fa-caret-down"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {#<div class="form-action">
+                                <div class="button-group">
+                                    <a id="add_to_cart" style="color:white" class="btn hvr-hover"  data-path="{{ path('cart_add',{'id':article.id}) }}">Ajouter au panier</a>
+                                </div>
+                            </div>#}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-none" id="jsVariants">
+                    {
+                    "variantes" :[
+                    {% for variant in article.variants %}
+                        {
+                        "id":"{{ variant.id }}",
+                        "reference":"{{ variant.reference }}",
+                        "size":"{{ variant.size }}",
+                        "sizeID":"{{ variant.size.id }}",
+                        "color":"{{ variant.color }}",
+                        "colorID":"{{ variant.color.id }}",
+                        "hex":"{{ variant.color.hex}}",
+                        "priceDealer":"{{ variant.priceDealer }}",
+                        "priceProfessional":"{{ variant.priceProfessional }}",
+                        "price":"{{ variant.price }}",
+                        "logo":"{{  variant.brand ? (asset('uploads/images/brands/' ~ variant.brand.logo)) : "" }}",
+                        "discount":"{{ variant.discount }}",
+                        "stock":"{{ variant.stock }}",
+                        "images" :[{% for image in variant.images %}"{{ image.url }}",{% endfor %}]
+                        },{% endfor %}]}
+                    </div>
+                </div>
+            </div>
+            <!-- End Cart -->
+        </div>
+        {% endblock %}
+            {% block javascripts %}
+                <script>
+                    var vars;
+                    function onAddArticle(event) {
+                        event.preventDefault();
+                        console.log("#add_to_cart is clicked");
+                        var $url = $(this).attr("data-path");
+                        var $qte = $("#option-product-qty").val();
+                        console.log($qte);
+                        $.ajax({
+                            type: "POST",
+                            url: $url,
+                            data: {quantity: $qte},
+                            success: function (data) {
+                                console.log(data);
+                                CartPreview(data);
+                            }
+                        });
+                    }
+                    $(document).ready(function () {
+                        var sSize;
+                        var sColor;
+                        var txtSizes = [];
+                        var iColors = [];
+                        var varsDraft = $('#jsVariants').text();
+                        var variants = varsDraft.replace('/\r?\n|\r/g', '');
+                        variants = variants.replaceAll(',]', ']');
+                    {#                            console.log("Vars : " + variants);#}
+                            vars = $.parseJSON(variants);
+                            console.debug(vars);
+                    {#                            console.log("First ID : " + vars.variantes[0].id);#}
+                            var liColors = "";
+                            var liSizes = "";
+                            $.each(vars.variantes, function (index, variant) {
+                    {#                                console.log("Id: " + variant.id);#}
+                    {#                                console.log("Référence: " + variant.reference);#}
+                                sSize = variant.size;
+                                iColor = variant.colorID;
+                    {#  console.log("Size: " + sSize);#}
+                    {#  console.log("Color: " + iColor);#}
+                                if (jQuery.inArray(sSize, txtSizes) === -1) {
+                    {#  liSizes += '<div class="d-inline p-2 bg-primary text-white"><button onClick="selectSizes(\'' + sSize + '\')">' + sSize + '</button></div>';#}
+                    {#  liSizes += '<div class="d-inline p-2 bg-primary text-white"><span onClick="selectSizes(\'' + sSize + '\')">' + sSize + '</span></div>';#}
+                    {#  liSizes += '<li onClick="selectSizes(\'' + sSize + '\', this)" >' + sSize + '</li>';#}
+                                    liSizes += '<li id="' + variant.sizeID + '"  class="">' + sSize + '</li>';
+                                    txtSizes.push(sSize);
+                                }
+                                if (jQuery.inArray(iColor, iColors) === -1) {
+                                    liColors += '<li id="' + iColor + '" class="" style="background:' + variant.hex + '; "></li>';
+                                    iColors.push(iColor);
+                                }
+                    {#  console.log("txtSizes: ");
+                        console.debug(txtSizes);
+                        console.log("Couleur: " + variant.color);
+                    #}
+                    {#<ul class="list-color">
+    <li style="background:#0c3b90;"><a href="#">red</a></li>
+    <li style="background:#036c5d;" class="active"><a href="#">red</a></li>
+#}                                   
+                    {#liColors += '<li onClick="selectColor(\'' + variant.id + '\')" style="background:' + variant.hex + '; width: 20px; height: 20px; float: left; margin: 5px;"></li>';#}
+                    {#liColors += '<li class="" onClick="selectColor(\'' + variant.id + '\', this)" style="background:' + variant.hex + '; "></li>';#}
+
+                    {#console.log("Hex : " + variant.hex);#}
+                    {#console.log("Prix: " + variant.price);#}
+                    {#$.each(variant.images, function (ix, image) {#}
+                    {#    console.log("image: " + image);#}
+                    {# });#}
+                            });
+                            $('#divColors').html(liColors);
+                            $('#divSizes').html(liSizes);
+                            $('#add_to_cart').click(function (e) {
+                                onAddArticle(e);
+                            });
+                            $('#divSizes li').click(function (e) {
+                                $('#divSizes li').removeClass('active');
+                                $(this).addClass('active');
+                    {# console.log('e.target.id : ' + e.target.id);#}
+                                selectSizes(e);
+                            });
+                            $('#divSizes > li:first-child').click();
+                            $('#divColors > li:first-child').click();
+                        });
+                        function selectColor(id) {
+                            var ht = 0;
+                            var ttc = 0;
+                            var customerType = $('#customerType').text();
+
+                            //currentElement.toggleClass('active');
+                            $.each(vars.variantes, function (index, variant) {
+                                if (variant.id === id) {
+                                    if (customerType === "DLR") {
+                                        ht = parseFloat(variant.priceDealer) || 0;
+                                    } else if (customerType === "PRF") {
+                                        ht = parseFloat(variant.priceProfessional) || 0;
+                                    } else {
+                                        ht = parseFloat(variant.price) || 0;
+                                    }
+                    {# ht = variant.price;#}
+                                    ttc = ht * 1.2;
+                                }
+                            });
+                            $('#HT').html(ht);
+                            $('#TTC').html(ttc);
+                        }
+
+                        function selectSizes(e) {
+                            var sizeID = e.target.id;
+                            var liColors = "";
+                            //currentElement.toggleClass('active');
+                            console.log('Stadium sizeID : ' + sizeID);
+                            $.each(vars.variantes, function (index, variant) {
+                                if (variant.sizeID === sizeID) {
+                    {# liColors += '<li  onClick="selectColor(\'' + variant.id + '\')"  style="background:' + variant.hex + '; width: 20px; height: 20px; float: left; margin: 5px;"><a href="#"></a></li>';#}
+                    {#liColors += '<li class="" onClick="selectColor(\'' + variant.id + '\')" style="background:' + variant.hex + ';"></li>';#}
+                    {#liColors += '<li class="" style="background:' + variant.hex + ';"></li>';#}
+                                    liColors += '<li id="' + variant.colorID + '" data-size="' + sizeID + '"  class="" style="background:' + variant.hex + '; "></li>';
+                    {#                                        liColors += '<li id="' + variant.colorID + '" class="" style="background:' + variant.hex + '; "></li>';#}
+                                }
+                            });
+                            $('#divColors').html(liColors);
+                            $('#divColors li').click(function (ec) {
+                                $('#divColors li').removeClass('active');
+                                $(this).addClass('active');
+                    {#console.log('vColors ' + this);#}
+                                selectColor(ec);
+                            });
+                            $('#divColors li').click();
+                        }
+                        function selectColor(e) {
+
+                            var colorID = e.target.id;
+                            var sizeID = e.target.getAttribute("data-size");
+                            var customerType = $('#customerType').text();
+                            console.log('sizeID : ' + sizeID);
+                            console.log('colorID : ' + colorID);
+                            $.each(vars.variantes, function (index, variant) {
+                                if (variant.sizeID === sizeID && variant.colorID == colorID) {
+                                    $('#articleRef').html(variant.reference);
+                    {#                                        let pr = $.number(variant.price, 2, ','); // Outputs: 135,873#}
+                                    let fPrice = 0;
+                                    if (customerType === "DLR") {
+                                        fPrice = parseFloat(variant.priceDealer) || 0;
+                                    } else if (customerType === "PRF") {
+                                        fPrice = parseFloat(variant.priceProfessional) || 0;
+                                    } else {
+                                        fPrice = parseFloat(variant.price) || 0;
+                                    }
+                    {#                                        let fOldPrice = parseFloat(parseFloat(variant.price) * 1.2) * 1.2;#}
+                                    fDiscount = variant.discount;
+                                    iStock = variant.stock;
+                                    console.log('fPrice : ' + fPrice);
+                                    $('#articlePrice').html(fPrice.toLocaleString('fr-FR', {minimumFractionDigits: 2}) + ' DH');
+                                    $('#articleBrand').attr("src",variant.logo);
+                    {#                                        $('#articleOldPrice').html(fOldPrice.toLocaleString('fr-FR', {minimumFractionDigits: 2}));#}
+                                    $('#articleDiscount').html(fDiscount + '%');
+                                    if (iStock == 1) {
+                                        $('#variantDispo').html('En stock');
+                                    } else {
+                                        $('#variantDispo').html('Rupture de stock');
+                                    }
+                                }
+                            });
+                        }
+
+                </script>
+            {% endblock %}

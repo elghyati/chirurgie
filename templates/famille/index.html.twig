@@ -1,0 +1,40 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Liste des familles!{% endblock %}
+
+{% block body %}
+    <div>
+        <h1 class="">Liste des familles</h1>
+    </div>
+    <hr />
+    <p class="badge-danger">En cours de conception</p>
+    <br />
+    <div class="table-responsive">
+        {#        <table class="table  table-striped  table-hover">#}
+        <table class="table  table-hover">
+            <thead class="table-dark">
+            <th>Famille</th>
+            <th>Image</th>
+            <th></th>
+            </thead>
+            <tbody>
+
+                {% for famille in familles %}
+                    <tr border-bottom>
+                        <td> {{ famille.famille }}</td>
+                        <td> <img src="{{ asset('img/' ~ famille.image) }}" width="40px" height="40px"> </td>
+                            {# <td> <img src="/img/{{ famille.image }}{{ asset('uploads/images/' ~ plat.image) }}"> </td>#}
+                        <td>
+                            {# <a class="btn btn-success" href="{{ path('client_show', {id: client.id}) }}">show</a>#}
+                            <a class="btn btn-primary" href="{{ path('famille_edit', {id: famille.id}) }} ">edit</a>
+                            <a class="btn btn-danger" href="{{ path('famille_delete', {id: famille.id}) }}">delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="btn btn-success" href="{{ path('famille_create') }}" style="margin-top: 15px;">Ajout famille</a>
+
+    </div>
+
+{% endblock %}

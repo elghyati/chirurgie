@@ -1,0 +1,566 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- TemplateBeginEditable name="doctitle" -->
+        <title>{% block title %}Chirurgie Med{% endblock %}</title>
+        <!-- TemplateEndEditable -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Site Metas -->
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Site Icons -->
+        <link rel="shortcut icon" href="{{ asset('admin/images/favicon.ico')}}">
+        {#<link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png')}}">#}
+
+        <!-- Site Icons -->
+        {#        <link rel="shortcut icon" href="admin/images/favicon.ico" type="image/x-icon">#}
+        {#        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">#}
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <!-- Site CSS -->
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ asset('css/custom.css') }}">     
+        <!-- FontAwsome CSS -->
+        <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+        {#        <link rel="stylesheet" href="{{ asset('css/all.min.css') }}"/>#}
+        <link rel="stylesheet" href="{{ asset('css/all.css') }}">     
+
+        {% block stylesheets %}{% endblock %}
+    </head>
+
+    <body>
+        {#<p>bonjour le test</p>
+        <i class="fa fa-times"></i> <!-- uses solid style -->
+        <i class="fa fa-bars"></i> <!-- uses solid style -->
+        <i class="fas fa-user"></i> <!-- uses solid style -->
+        <i class="far fa-user"></i> <!-- uses regular style -->
+        <i class="fal fa-user"></i> <!-- uses light style -->
+        <!--brand icon-->
+        <i class="fab fa-github-square"></i> <!-- uses brands style -->
+        <p>bonsoir le test</p>#}
+        <!-- Start Main Top -->
+        <div class="main-top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        {#<div class="custom-select-box"> 
+
+                        </div>#}
+                        <div class="right-phone-box">
+                            <p><i class="fa fa-phone"></i> <a href="#"> +212 661 800 100</a></p>
+                        </div>
+                        <div class="our-link">
+                            {#                            <ul class="navbar-nav ml-auto login-box">#}
+                            <ul>
+
+                                {#</ul>#}
+                                {#<ul>#}
+                                {#<li><a href="{{ path('user_index') }}"><i class="fa fa-user s_color"></i> Mon compte</a></li>#}
+                                <li><a href="#"><i class="fas fa-location-arrow"></i> Localisation</a></li>
+                                <li><a href="{{ path('contact') }}"><i class="fas fa-headset"></i> Contactez-nous</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="our-link" style="float: right;"> {#  style="width: 50%"#} 
+                            <ul>
+                                {% if app.user %}
+                                    {#                            <li class="nav-item dropdown">#}
+                                    <li>
+                                        {# <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="accountDropLink" role="button" aria-haspopup="true" aria-expanded="false">#}
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="accountDropLink" >
+                                            {#<img style="height: 20px; width: 20px; background: #0069d9;  border-radius: 50%"> #}
+                                            <i class="fas fa-user"></i> 
+                                            {{ app.user.fullName }}
+                                        </a>
+                                        {# <div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountDropLink">#}
+                                        <div class="dropdown-menu main-top" aria-labelledby="accountDropLink">
+                                            <a href="{{ path('user_index') }}" class="dropdown-item">Mon compte</a>
+                                            <a href="{{ path('user_profile') }}" class="dropdown-item">Modifier mon profil</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="{{ path('customer_logout') }}" class="dropdown-item">Déconnexion</a>
+
+                                        </div>
+                                    </li>
+                                    {#<li class="nav-item  active">
+                                        <a href="{{ path('user_logout') }}" class="nav-link">Déconnexion</a>
+                                    </li>#}
+                                {% else %}
+                                    {# <li class="nav-item dropdown">#}
+                                    <li>
+                                        {#<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="accountDropLink" role="button" aria-haspopup="true" aria-expanded="false">#}
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="accountDropLink" >
+                                            {#<img style="height: 20px; width: 20px; background: #0069d9;  border-radius: 50%"> #}
+                                            <i class="fas fa-user"></i> 
+                                            Mon Compte 
+                                        </a>
+                                        <div class="dropdown-menu main-top" aria-labelledby="accountDropLink">
+                                            <a href="{{ path('customer_login') }}" class="dropdown-item">Connexion</a>
+                                            <a href="{{ path('customer_register') }}" class="dropdown-item">Inscription</a>
+
+                                        </div>
+                                    </li>
+                                    {#<li class="nav-item  active">
+                                        <a href="{{ path('user_register') }}" class="nav-link">Inscription</a>
+                                    </li>
+                                    <li class="nav-item  active">
+                                        <a href="{{ path('user_login') }}" class="nav-link">Connexion</a>
+                                    </li>#}
+                                {% endif %}
+                            </ul>
+                        </div>
+
+
+                        {#<div class="login-box">
+                            <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
+                                <option>Inscription</option>
+                                <option>Connexion</option>
+                            </select>
+                        </div>#}
+                        <div class="text-slid-box">
+                            <div id="offer-box" class="carouselTicker">
+                                <ul class="offer-box">
+                                    <li> <i class="fab fa-opencart"></i> -20% pour tout achat code Promo : offT80 </li>
+                                    <li> <i class="fab fa-opencart"></i> -50% à - 80% pour thermomètres </li>
+                                    <li> <i class="fab fa-opencart"></i> -10%! Achat meubles </li>
+                                    <li> <i class="fab fa-opencart"></i> -50%! Pour tout acaht immédiat </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {#<div class="login-box our-link"  style="width: 50%" >#}
+
+
+                </div>
+            </div>
+        </div>
+        <!-- End Main Top --> 
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+        <!-- Start Main Top -->
+        <header class="main-header" role="banner"> 
+            <!-- Start Navigation -->
+                <div class="container" style="border-bottom: 1px solid green;"> 
+                    <!-- Start Header Navigation -->
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <div class="navbar-header">
+                                {# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation"> <i class="fa fa-bars"></i> </button> #}
+                                <a class="navbar-brand" href="{{ path('home_index') }}"><img src="{{ asset('img/logo.png')}}" class="logo" alt=""><!--Chirurgie Med--></a> 
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="search-product mt-4">
+                                <form action="#">
+                                    <span class="search-bar">
+                                        <input class="form-control" placeholder="search for products" id="mySearch" type="text" disabled>
+                                        <button type="submit"><label for="mySearch"> <i class="fa fa-search"></i></label></button>
+                                    </span>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-3 clearfix">
+                            {# <div class="attr-nav"> #}
+                                {# <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-heart"></i>
+                                            <span>Your Wishlist</span>
+                                            <div class="qty">2</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span>Your Cart</span>
+                                            <div class="qty">3</div>
+                                        </a>
+                                    </li>
+                                </ul> #}
+							<div class="header-ctn">
+								<!-- Wishlist -->
+								<div>
+									<a href="#">
+										<i class="fa fa-heart"></i>
+										{# <span>Your Wishlist</span> #}
+										<div class="qty">2</div>
+									</a>
+								</div>
+								<!-- /Wishlist -->
+
+								<!-- Cart -->
+								<div>
+									<a href="#">
+                                        <i class="fa fa-shopping-cart" style="font-weight: 600;"></i>
+										{# <span>Your Cart</span> #}
+										<div class="qty">3</div>
+									</a>
+								</div>
+								<!-- /Cart -->
+							</div>
+                            {# </div> #}
+                        </div>
+                    </div>
+                    <!-- End Atribute Navigation --> 
+                </div>
+		<!-- Header desktop -->
+		{# <div class="container-menu-desktop">
+
+			<div class="wrap-menu-desktop">
+				<nav class="limiter-menu-desktop container">
+					<!-- Menu desktop -->
+					<div class="menu-desktop">
+						<ul class="main-menu">
+							<li class="active-menu">
+                                <a class="nav-link" href="{{ path('home_index') }}" aria-selected="true">Accueil</a>
+							</li>
+
+							<li>
+								<a class="nav-link" href="{{ path('article_shop') }}" aria-selected="false">Produits</a>
+							</li>
+
+							<li class="label1" data-label1="hot">
+								<a class="nav-link" href="{{ path('brand_index') }}" aria-selected="false">Marques</a>
+							</li>
+
+							<li>
+								<a class="nav-link" href="{{ path('aboutus') }}" aria-selected="false">À Propos</a>
+							</li>
+
+							<li>
+								<a class="nav-link" href="{{ path('contact') }}">Contact</a>
+							</li>
+						</ul>
+					</div>	
+				</nav>
+			</div>	
+		</div> #}
+        {# <div class="site-mobile-menu">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div> #}
+
+        <div class="col-12 col-md-10 d-none d-xl-block" id="navbar">
+            <nav class="site-navigation position-relative center">
+              <ul class="nav site-menu js-clone-nav mr-auto d-none d-md-block d-lg-block">
+                <li><a href="{{ path('home_index') }}" aria-selected="true"><span class="menu-act"><b>Accueil</b></span></a></li>
+                <li><a href="{{ path('article_shop') }}" aria-selected="false"><span class="menu-act"><b>Produits</b></span></a></li>
+                <li class="has-children d-none">
+{#                  <a href="{{ path('brand_index') }}" aria-selected="false"><span class="menu-act"><b>Marques</b></span></a>#}
+                  <a href="#" aria-selected="false"><span class="menu-act d-none"><b>Marques</b></span></a>
+{#                  <a href="{{ path('brand_index') }}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="menu-act">Marques</span></a>#}
+                    {# <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Marque 1</a>
+                        <a class="dropdown-item" href="#">Marque 2</a>
+                        <a class="dropdown-item" href="#">Marque 3</a>
+                    </div> #}
+                </li>
+                <li><a href="{{ path('aboutus') }}" aria-selected="false"><span class="menu-act"><b>À Propos</b></span></a></li>
+                <li><a href="{{ path('contact') }}" aria-selected="false"><span class="menu-act"><b>Contact</b></span></a></li>
+              </ul>
+            </nav>
+        </div>
+                <!-- Start Side Menu : Cart preview -->
+                {# <div class="side"> <a href="#" class="close-side"><i class="fa fa-times"></i></a> #}
+                    {# <li class="cart-box">
+                        <ul id="cartMiniList" class="cart-list"> #}
+                            {#                            {% if items is defined %}
+                                                            {% for item in items %}
+                            
+                                                                <li> <a href="{{ path('article_detail', {id: item.article.id}) }}" class="photo">
+                                                                        <img src="{{ asset('uploads/images/articles/' ~ item.article.coverImage) }}" class="cart-thumb" alt="" /></a>
+                                                                    <h6><a href="{{ path('article_detail', {id: item.article.id}) }}">{{ item.article.designation }} </a></h6>
+                                                                    <p>{{ item.quantity }} x  <span class="price">{{ item.article.price }} DH</span></p>
+                                                                </li>
+                                                                {#<li> <a href="#" class="photo"><img src="images/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
+                                                                    <h6><a href="#">Brancard pliable et portable 2</a></h6>
+                                                                    <p>1x - <span class="price">3500,00 DH</span></p>
+                                                                </li>
+                                                                <li> <a href="#" class="photo"><img src="images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
+                                                                    <h6><a href="#">Table a manger</a></h6>
+                                                                    <p>1x - <span class="price">250,00 DH</span></p>
+                                                                </li># }
+                                                            {% endfor %}
+                                                        {% endif %}
+                            <li class="total"> 
+                                <a href="{{ path('cart_index') }}" class="btn btn-default hvr-hover btn-cart">Panier</a> 
+                                <span class="float-right">
+                                    <strong>Total HT</strong>: {{total}}
+                                </span> 
+                            </li>
+                            #}                            
+                        {# </ul>
+                    </li>
+                </div> #}
+                <!-- End Side Menu --> 
+            <!-- End Navigation --> 
+          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;left: 10px;"><a href="#" class="site-menu-toggle js-menu-toggle active"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+        </header>
+        <!-- End Main Top --> 
+
+        <!-- Start Top Search -->
+        {#<div class="top-search">
+            <div class="container">
+                <div class="input-group"> <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-addon close-search"><i class="fa fa-times"></i></span> </div>
+            </div>
+        </div>#}
+        <!-- End Top Search --> 
+        <!-- Start flashes -->
+        {% for label, messages in app.flashes %}
+            <div class="alert alert-{{label}}">
+                {% for  message in messages %}
+                    <p>{{ message |raw }}</p>
+                {% endfor %}
+            </div>
+        {% endfor %}
+        <!-- End flashes -->
+        {#<div class="my-5"></div>#}
+        {% block body %}{% endblock %}
+
+        <!-- Start Footer  -->
+        <footer>
+            <div class="footer-main">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-top-box">
+                                <h3><u>A propos de Chirurgie Med</u></h3>
+                                    <p>
+                                        Fondée en 2013, <a href="{{ path('aboutus') }}" style="color: white;"><b><u>CHIRURGIE-MED</u></b></a> est une
+                                        société citoyenne spécialisée dans l’importation et la distribution des
+                                        dispositifs médicaux, matériels et consommables de qualité.
+                                    </p>
+                                    <p>
+                                        Située au nord -ouest du Maroc à 13 Km de Rabat, sur une superficie de 2500
+                                        m<sup>2</sup> et présente à travers tout le royaume via un réseau fort des
+                                        distributeurs développé et qui nous fait confiance depuis plusieurs années.
+                                    </p>
+                            </div>
+                            <div class="footer-top-box">
+                                <h3><u>Réseaux Sociaux</u></h3>
+                                <p>Retrouvez-nous sur :</p>
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-top-box">
+                                <h3><u>Heures de travail</u></h3>
+                                <ul class="list-time">
+                                    <li>Lundi - Vendredi: 08h00 à 19h00</li>
+                                    <li>Samedi: 09h00-13h00</li>
+                                    <li>Dimanche : <span>Fermé</span></li>
+                                </ul>
+                            </div>
+                            <div class="footer-link">
+                                <h3><u>Information</u></h3>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <ul>
+                                            <li><a href="{{ path('home_index') }}">Accueil</a></li>
+                                            <li><a href="{{ path('article_shop') }}">Produits</a></li>
+{#                                            <li><a href="{{ path('brand_index') }}">Marques</a></li>#}
+                                            <li class="d-none"><a href="#">Marques</a></li>
+                                            <li><a href="{{ path('aboutus') }}">à Propos</a></li>
+                                            <li><a href="{{ path('contact') }}">Contact</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><a href="#">Informations de livraison</a></li>
+                                            <li><a href="#">Politique de confidentialité</a></li>
+                                            <li><a href="#">Termes et conditions</a></li>
+                                            <li><a href="#">Termes de recherche</a></li>
+                                            <li><a href="#">Commande &amp; Retour</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 55px;width: 150%;">
+                                    <div class="footer-top-box">
+                                        {# <h3>Newsletter</h3> #}
+                                        <form class="newsletter-box">
+                                        <div class="form-group">
+                                            <input class="" type="email" name="Email" placeholder="Email Address*" />
+                                            <i class="fa fa-envelope"></i> </div>
+                                        <button class="btn-foot btn hvr-hover" type="submit">Envoyer</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-link-contact">
+                                <h3><u>Contact</u></h3>
+                                <ul>
+                                    <li>
+                                        <p><i class="fas fa-map-marker-alt"></i>LOT BELFQUIH, 91 AV.TARIK IBN ZIAD<br> – TEMARA - MAROC </p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fas fa-phone-square"></i>Fix : <a href="tel:+212-661800300">+212 5 37 62 72 12 /<br> +212 5 37 64 65 47</a></p>
+                                        <p><i class="fas fa-fax"></i>Fax : <a href="tel:+212-661800300">+212 5 37 62 72 88</a></p>
+                                        <p><i class="fas fa-mobile"></i></i>GSM : <a href="tel:+212-661800300">+212 661 39 43 47 /<br> +212 682 33 16 32 </a></p>
+                                        <p><i class="fas fa-headset"></i>SAV : <a href="tel:+212-661800300">+ 212 06 37 72 15 92 </a></p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fas fa-envelope"></i>Email: <a href="mailto:pro@chirurgiemed.ma">pro@chirurgiemed.ma  <br>/ contact@chirurgiemed.ma  
+                                        <br>/ info@chirurgiemed.ma </a></p>
+                                    </li>
+                                </ul>
+                                <ul class="menu-pay" style="margin-top: 105px;">
+                                    <li><a href="#"><img src="{{ asset('img/paypal.png')}}" alt="paypal" /></a></li>
+                                    <li><a href="#"><img src="{{ asset('img/mastercard.png')}}" alt="mastercard" /></a></li>
+                                    <li><a href="#"><img src="{{ asset('img/visa.png')}}" alt="visa" /></a></li>
+                                </ul> 
+                            </div>
+                        </div>
+                    </div>
+                    {# <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-top-box">
+                                <form class="newsletter-box">
+                                <div class="form-group">
+                                    <input class="" type="email" name="Email" placeholder="Email Address*" />
+                                    <i class="fa fa-envelope"></i> </div>
+                                <button class="btn hvr-hover" type="submit">Envoyer</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div> #}
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer  --> 
+        <!-- Start copyright  -->
+        <div class="footer-copyright">
+            <p class="footer-company">Tous droits Réservés. &copy; 2022 <!--<a href="#">ThewayShop</a> Design By : <a href="https://html.design/">html design</a>--></p>
+        </div>
+        <!-- End copyright  --> 
+
+        {#<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a> #}
+        <a href="#" id="back-to-top" title="Haut de page" style="display: none;"><i class="fa fa-arrow-up"></i></a> 
+
+
+        <!-- ALL JS FILES -->
+        <script src="{{ asset('js/jquery-3.2.1.min.js')}}"></script>
+        <script src="{{ asset('js/popper.min.js')}}"></script>
+        <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+        <!-- ALL PLUGINS -->
+        <script src="{{ asset('js/jquery.superslides.min.js')}}"></script>
+        <script src="{{ asset('js/bootstrap-select.js')}}"></script>
+        <script src="{{ asset('js/inewsticker.js')}}"></script>
+        <script src="{{ asset('js/bootsnav.js')}}"></script>
+        <script src="{{ asset('js/images-loded.min.js')}}"></script>
+        <script src="{{ asset('js/isotope.min.js')}}"></script>
+        <script src="{{ asset('js/owl.carousel.min.js')}}"></script>
+        <script src="{{ asset('js/baguetteBox.min.js')}}"></script>
+        <script src="{{ asset('js/form-validator.min.js')}}"></script>
+        <script src="{{ asset('js/contact-form-script.js')}}"></script>
+        <script src="{{ asset('js/custom.js')}}"></script>
+        <script src="{{ asset('js/axios.min.js')}}"></script>
+        {# <script src="{{ asset('js/activeNav.js')}}"></script> #}
+        <script src="{{ asset('js/jquery.sticky.js')}}"></script>
+        <script src="{{ asset('js/main.js')}}"></script>
+        <script>
+            function CartPreview(dataCart) {
+                var htmlCart = "";
+                if (dataCart != null && dataCart.items != null) {
+            {#                    var items = [];#}
+                        console.log(dataCart.total);
+                        var details = JSON.parse(dataCart.items.content);
+                        console.log(details);
+                        $.each(details, function (key, item) {
+                            htmlCart += '<li> <a href="{{ path('article_detail', {id: 'item_id'}) }}" class = "photo" > ' +
+                                    '<img src="{{ asset("uploads/images/articles/" ~ 'item_image') }}" class="cart-thumb" alt="" /> </a> ' +
+                                    '<h6>{#<a href="{{ path('article_detail', {id: 'item_id'}) }}">' +#}' + item.designation + '{#'</a>#}</h6>'
+            {# {%if app.user%} #}
+                                    + '<span class="float-right">' + item.quantity + ' x <span class = "price" >' + parseFloat(item.puht).toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: true}) + ' DH </span></span>'
+            {# {%endif%} #}
+                                    + '</li>'
+                            htmlCart = htmlCart.replace('item_id', item.id);
+                            htmlCart = htmlCart.replace('item_image', item.image);
+                        });
+                        htmlCart += '<li class="total" style="margin-bottom: 70px;" > ' +
+                                '<a href="{{ path('cart_index') }}" class="btn btn-default hvr-hover btn-cart">Panier</a>' +
+                                '<span class="float-right">'
+            {# {%if app.user%} #}
+                                + '   Total HT: <strong>' + parseFloat(dataCart.total).toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: true}) + '<strong>'
+            {# {%endif%} #}
+                                + ' </span>'
+                                + '</li>'
+                        $("#cartMiniList").html(htmlCart);
+                        if (details.length != null) {
+                            $("#items_count").html(details.length);
+                        } else {
+                            $("#items_count").html("0");
+                        }
+                    }
+                    return htmlCart;
+                }
+                $(document).ready(function () {
+                    var $url = "{{ path('cart_get') }}";
+                    $.ajax({
+                        type: "POST",
+                        url: $url,
+                        cache: true,
+                        success: function (data) {
+                            $('#cartMiniList').html(CartPreview(data));
+            {# event.preventDefault();#}
+                        }
+                    });
+
+
+                });
+        </script>
+        {# @AI Start #}
+        <script>
+            jQuery(function($) {
+                
+                var path = window.location.href; 
+                
+                $('ul a').each(function() {
+                
+                if (this.href === path) {
+                
+                $(this).parent().addClass('active');
+                //$('.nav li.active').removeClass('active');
+                
+                }
+                
+                });
+            });
+        </script>
+        {# @AI end #}
+{% block javascripts %}{% endblock %}
+
+    </body>
+</html>

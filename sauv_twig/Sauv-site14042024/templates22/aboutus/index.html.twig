@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AboutusController!{% endblock %}
+
+{% block body %}
+<div class="background" id="background1"></div>
+<div class="background" id="background2"></div>
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>A propos de Chirurgie Med</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><u>Home</u></a></li>
+                        <li class="breadcrumb-item active">A propos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End All Title Box -->
+
+    <!-- Start About Page  -->
+    <div class="about-box-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="banner-frame">
+                     <img class="img-fluid" src="{{ asset('img/' ~ 'chirurgie-med.png')  }}" 
+                     alt="" />
+                        {# <video autoplay muted loop id="myVideo">
+                            <source src="img/video-chir3.mp4" type="video/mp4">
+                        </video> #}
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="noo-sh-title-top">Qui sommes-nous ?</h2>
+                    <p>
+                        <b>F</b>ondée en 2013, <a name="_Hlk92304881"><b>CHIRURGIE-MED</b> </a>est une
+                        société citoyenne spécialisée dans l’importation et la distribution des
+                        dispositifs médicaux, matériels et consommables de qualité.
+                    </p>
+                    <p>
+                        <b>S</b>ituée au nord -ouest du Maroc à 13 Km de Rabat, sur une superficie de 2500
+                        m<sup>2</sup> et présente à travers tout le royaume via un réseau fort des
+                        distributeurs développé et qui nous fait confiance depuis plusieurs années.
+                    </p>
+                    <p>
+                        <b>L</b>eader dans son domaine, <b>CHIRURGIE-MED</b> offre un large panel de
+                        solutions innovantes de différentes spécialités en l’occurrence
+                        l’orthopédie, l’ophtalmologie, drapage, chirurgie, diagnostic, biopsie et
+                        l’aide à la mobilité en partenariat avec de prestigieuses marques de
+                        renommées à l’échelle internationale telles que :
+                        <b>
+                            <i>
+                                MANI – ABC - MEDCARE - DEVINE – MEDLTECH - KONSUNG - GEOTEK - FSSB
+                                -VSY BIOTECHNOLOGY - MERAN - CARE GROUP - DAYANG ZAMAR.
+                            </i>
+                        </b>
+                    </p>
+                    <p>
+                        <b>G</b>race à une équipe jeune, dynamique et compétente avec plus de <b>20 ans</b>
+                        d’expérience à son actif dans le monde du médical, ceci représente un gage
+                        de professionnalisme envers nos alliés pour les secteurs public et privé en
+                        leur garantissant une qualité de produit et de service supérieure au
+                        service de la santé du patient en veillant sur le respect des exigences
+                        réglementaires.
+                    </p>
+                    <p>
+                        <i>Votre Satisfaction est notre priorité.</i>
+                    </p>
+                    <p>
+                        Notre Certificat ISO :
+                    </p>
+                    <p>
+                        <img src="{{ asset('img/' ~ 'imanor.png')}}" class="w-100" alt="imanor"/>
+                    </p>
+                    {# <a class="btn hvr-hover" href="{{path('aboutus2')}}">Lire Plus</a> #}
+                    {# <a class="btn hvr-hover" href="#">Lire Plus</a> #}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About Page -->
+
+{% endblock %}

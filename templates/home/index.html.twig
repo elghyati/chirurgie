@@ -1,0 +1,505 @@
+{% extends 'base.html.twig' %}
+{% block title %}Chirurgie Med - Home{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style-carossel.css') }}">
+{% endblock %}
+{% block body %}
+    <div style="/* margin: 10%; */margin-top: 0.5%;padding-left: 5%;padding-right: 5%;">
+{#        style="/* margin: 10%; */margin-top: 0.5%;padding-left: 5%;padding-right: 5%;"#}
+    <div class="background d-none d-md-block" id="background1"></div>
+    <div class="background d-none d-md-block" id="background2"></div>
+
+    <!--==============================
+Start Slider
+==============================-->
+    <div class="th-hero-wrapper hero-1" id="hero" data-bg-src="assets/img/hero/hero_bg_1_1.jpg">
+        <div class="swiper th-slider" style="margin-top: -0px;"  id="heroSlide1" data-slider-options='{"effect":"fade","autoHeight":true}'>
+            <div class="swiper-wrapper" >
+                {% for middle in middles %}
+                    <div class="swiper-slide">
+                        <div class="hero-inner">
+                            <div class="container-fluid">
+                                <img src="{{ asset('uploads/images/middle/' ~ middle.image) }}" class="w-100"
+                                     style="height: 50%" alt="Image">
+                                {#                            <img src="{{ asset('img/hero/chmed_img1.jpg') }}" class="w-100" style="height: 50%"alt="Image"> #}
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <h3 class="next">Aucune image n'est enregistrée</h3>
+                {% endfor %}
+                {#                <div class="swiper-slide"> #}
+                {#                    <div class="hero-inner"> #}
+                {#                        <div class="container"> #}
+                {#                            <img src="{{ asset('img/hero/chmed_img2.jpg') }}" class="w-100" style="height: 50%" #}
+                {#                                 alt="Image"> #}
+                {#                        </div> #}
+                {#                    </div> #}
+                {#                </div> #}
+
+                {#                <div class="swiper-slide"> #}
+                {#                    <div class="hero-inner"> #}
+                {#                        <div class="container"> #}
+                {#                            <img src="{{ asset('img/hero/chmed_img3.jpg') }}" class="w-100" style="height: 50%" #}
+                {#                                 alt="Image"> #}
+                {#                        </div> #}
+                {#                    </div> #}
+                {#                </div> #}
+
+            </div>
+        </div>
+
+        <div class="hero-thumb-wrap">
+            <div class="hero-thumb" data-slider-tab="#heroSlide1">
+                <div class="tab-btn active">
+                    <img src="{{ asset('img/hero/hero_thumb_1_1.png') }}" alt="Image">
+                </div>
+                <div class="tab-btn">
+                    <img src="{{ asset('img/hero/hero_thumb_1_2.png') }}" alt="Image">
+                </div>
+                <div class="tab-btn">
+                    <img src="{{ asset('img/hero/hero_thumb_1_3.png') }}" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+    Arrivages récents
+    ==============================-->
+    <section style="padding-top: 37px;" class="space" id="blog-sec">
+{#        //data-bg-src="{{ asset('img/bg/blog_bg_1.jpg') }}"#}
+        <div class="container-fluid">
+            <div class="row justify-content-lg-between justify-content-center align-items-center">
+                <div class="col-lg">
+                    <div class="title-area text-center text-lg-start">
+                        {% for setting in arrivalsetting %}
+                            <span class="sub-title"><img src="{{ asset('img/theme-img/title_icon.svg') }}" alt="shape">
+                            {{ setting.title }}
+                        </span>
+                        {% else %}
+                            <h3 class="next">Aucune image n'est enregistrée</h3>
+                        {% endfor %}
+
+                        {#                                <div class="title-all text-center"> #}
+                        {#                                    <h1>Arrivages récents</h1> #}
+                        {#                                </div> #}
+
+                        <img src="{{ asset('img/under-title.png') }}" class="under-title" alt="under-title"/>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-area">
+                <div class="swiper th-slider has-shadow" id="blogSlider1"
+                     data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
+                    <div class="swiper-wrapper">
+                        {% for arrival in arrivals %}
+                            <div class="swiper-slide">
+                                <div class="blog-card">
+                                    <div class="blog-img">
+                                        {#                                    <img src="{{ asset('img/product/product_1_1.jpg') }}" alt="blog image"> #}
+                                        <img src="{{ asset('uploads/images/arrivages/' ~ arrival.image) }}"
+                                             alt="blog image">
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                            <h3 class="next">Aucune image n'est enregistrée</h3>
+                        {% endfor %}
+                        {#                        <div class="swiper-slide"> #}
+                        {#                            <div class="blog-card"> #}
+                        {#                                <div class="blog-img"> #}
+                        {#                                    <img src="{{ asset('img/product/product_1_2.jpg') }}" alt="blog image"> #}
+                        {#                                </div> #}
+                        {#                            </div> #}
+                        {#                        </div> #}
+
+                        {#                        <div class="swiper-slide"> #}
+                        {#                            <div class="blog-card"> #}
+                        {#                                <div class="blog-img"> #}
+                        {#                                    <img src="{{ asset('img/product/product_1_3.jpg') }}" alt="blog image"> #}
+                        {#                                </div> #}
+                        {#                            </div> #}
+                        {#                        </div> #}
+
+                        {#                        <div class="swiper-slide"> #}
+                        {#                            <div class="blog-card"> #}
+                        {#                                <div class="blog-img"> #}
+                        {#                                    <img src="{{ asset('img/product/product_1_4.jpg') }}" alt="blog image"> #}
+                        {#                                </div> #}
+                        {#                            </div> #}
+                        {#                        </div> #}
+
+                        {#                        <div class="swiper-slide"> #}
+                        {#                            <div class="blog-card"> #}
+                        {#                                <div class="blog-img"> #}
+                        {#                                    <img src="{{ asset('img/product/product_1_5.jpg') }}" alt="blog image"> #}
+                        {#                                </div> #}
+                        {#                            </div> #}
+                        {#                        </div> #}
+
+                        {#                        <div class="swiper-slide"> #}
+                        {#                            <div class="blog-card"> #}
+                        {#                                <div class="blog-img"> #}
+                        {#                                    <img src="{{ asset('img/product/product_1_6.jpg') }}" alt="blog image"> #}
+                        {#                                </div> #}
+                        {#                            </div> #}
+                        {#                        </div> #}
+
+                    </div>
+                </div>
+                <button data-slider-prev="#blogSlider1" class="slider-arrow slider-prev"><i
+                            class="far fa-arrow-left"></i></button>
+                <button data-slider-next="#blogSlider1" class="slider-arrow slider-next"><i
+                            class="far fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Products  -->
+    <div class="products-box">
+        <div class="container-fluid">
+
+            <div class="row justify-content-lg-between justify-content-center align-items-center">
+                <div class="col-lg">
+                    <div class="title-area text-center text-lg-start">
+                        <span class="sub-title">
+                            <img src="{{ asset('img/theme-img/title_icon.svg') }}"
+                                 alt="shape">Produits en promotion</span>
+                        <img src="img/under-title.png" class="under-title" alt="under-title"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-area">
+                <div class="swiper th-slider has-shadow" id="productSlider1"
+                     data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
+                    <div class="swiper-wrapper">
+
+                        {% for promotion in promotions %}
+                            <div class="swiper-slide" >
+                                <div style="border: none;" class="blog-card">
+                                    <div class="product-grid-home" style="height: 554px">
+                                        <div class="product-image">
+                                            <a href="#" class="image">
+{#                                                <img src="img/product_ch1.jpg">#}
+                                                <img src="{{ asset('uploads/images/promotions/' ~ promotion.image) }}"
+                                                     alt="blog image" style="width: 100%;height: 354px;">
+                                            </a>
+                                            <span class="product-sale-label clipped">-{{ promotion.percentage }}</span>
+                                            <ul class="product-links">
+                                                <li><a href="#" data-tip="Add to Wishlist"><i
+                                                                class="fas fa-cart-arrow-down"></i></a>
+                                                </li>
+                                                <li><a href="#" data-tip="Compare"><i class="fa fa-search"></i></a></li>
+                                                <li><a href="#" data-tip="Quick View"><i class="fa fa-heart"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">{{ promotion.name }}</a></h3>
+                                            <ul class="rating">
+                                                <li class="fas fa-star"></li>
+                                                <li class="fas fa-star"></li>
+                                                <li class="fas fa-star"></li>
+                                                <li class="fas fa-star"></li>
+                                                <li class="far fa-star"></li>
+                                            </ul>
+                                            <span class="product-category"><a href="#">
+                                                    <b>{{ promotion.description }}
+{#                                                        <strike#}
+{#                                                                style='color:black'>350 dhs#}
+{#                                                        </strike>#}
+                                                    </b>
+                                                </a>
+                                            </span>
+                                            {#                                            <span class="product-category"><a href="#"><b>300 dhs au lieu de <strike #}
+                                            {#                                                                style='color:black'>350 dhs</strike></b></a></span> #}
+                                            {# <div class="price">$55.55</div> #}
+{#                                            <a href="#" class="add-to-cart"><i class="fas fa-cart-plus"></i> Ajouter aux panier</a>#}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                            <h3 class="next">Aucune image n'est enregistrée</h3>
+                        {% endfor %}
+
+
+                        {#                        <div class="swiper-slide"> #}
+                        {#                            <div style="border: none" class="blog-card"> #}
+                        {#                                <div class="product-grid-home"> #}
+                        {#                                    <div class="product-image"> #}
+                        {#                                        <a href="#" class="image"> #}
+                        {#                                            <img src="img/product_ch2.jpg"> #}
+                        {#                                        </a> #}
+                        {#                                        <span class="product-sale-label clipped">-15%</span> #}
+                        {#                                        <ul class="product-links"> #}
+                        {#                                            <li><a href="#" data-tip="Add to Wishlist"><i #}
+                        {#                                                            class="fas fa-cart-arrow-down"></i></a> #}
+                        {#                                            </li> #}
+                        {#                                            <li><a href="#" data-tip="Compare"><i class="fa fa-search"></i></a></li> #}
+                        {#                                            <li><a href="#" data-tip="Quick View"><i class="fa fa-heart"></i></a></li> #}
+                        {#                                        </ul> #}
+                        {#                                    </div> #}
+                        {#                                    <div class="product-content"> #}
+                        {#                                        <h3 class="title"><a href="#">Nom du Produit</a></h3> #}
+                        {#                                        <ul class="rating"> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="far fa-star"></li> #}
+                        {#                                        </ul> #}
+                        {#                                        <span class="product-category"><a href="#"><b>300 dhs au lieu de <strike #}
+                        {#                                                            style='color:black'>350 dhs</strike></b></a></span> #}
+                        {#                                        #}{# <div class="price">$79.99</div> #}
+                        {#                                        <a href="#" class="add-to-cart"><i class="fas fa-cart-plus"></i> Ajouter aux #}
+                        {#                                            panier</a> #}
+                        {#                                    </div> #}
+                        {#                                </div> #}
+                        {#                            </div> #}
+                        {#                        </div> #}
+
+                        {#                        <div class="swiper-slide"> #}
+                        {#                            <div style="border: none" class="blog-card"> #}
+                        {#                                <div class="product-grid-home"> #}
+                        {#                                    <div class="product-image"> #}
+                        {#                                        <a href="#" class="image"> #}
+                        {#                                            <img src="img/product_ch3.png"> #}
+                        {#                                        </a> #}
+                        {#                                        <span class="product-sale-label clipped">-15%</span> #}
+                        {#                                        <ul class="product-links"> #}
+                        {#                                            <li><a href="#" data-tip="Add to Wishlist"><i #}
+                        {#                                                            class="fas fa-cart-arrow-down"></i></a> #}
+                        {#                                            </li> #}
+                        {#                                            <li><a href="#" data-tip="Compare"><i class="fa fa-search"></i></a></li> #}
+                        {#                                            <li><a href="#" data-tip="Quick View"><i class="fa fa-heart"></i></a></li> #}
+                        {#                                        </ul> #}
+                        {#                                    </div> #}
+                        {#                                    <div class="product-content"> #}
+                        {#                                        <h3 class="title"><a href="#">Nom du Produit</a></h3> #}
+                        {#                                        <ul class="rating"> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="far fa-star"></li> #}
+                        {#                                        </ul> #}
+                        {#                                        <span class="product-category"><a href="#"><b>300 dhs au lieu de <strike #}
+                        {#                                                            style='color:black'>350 dhs</strike></b></a></span> #}
+                        {#                                        #}{# <div class="price">$55.55</div> #}
+                        {#                                        <a href="#" class="add-to-cart"><i class="fas fa-cart-plus"></i> Ajouter aux #}
+                        {#                                            panier</a> #}
+                        {#                                    </div> #}
+                        {#                                </div> #}
+                        {#                            </div> #}
+                        {#                        </div> #}
+
+                        {#                        <div class="swiper-slide"> #}
+                        {#                            <div style="border: none" class="blog-card"> #}
+                        {#                                <div class="product-grid-home"> #}
+                        {#                                    <div class="product-image"> #}
+                        {#                                        <a href="#" class="image"> #}
+                        {#                                            <img src="img/product/product_1_5.jpg"> #}
+                        {#                                        </a> #}
+                        {#                                        <span class="product-sale-label clipped">-15%</span> #}
+                        {#                                        <ul class="product-links"> #}
+                        {#                                            <li><a href="#" data-tip="Add to Wishlist"><i #}
+                        {#                                                            class="fas fa-cart-arrow-down"></i></a> #}
+                        {#                                            </li> #}
+                        {#                                            <li><a href="#" data-tip="Compare"><i class="fa fa-search"></i></a></li> #}
+                        {#                                            <li><a href="#" data-tip="Quick View"><i class="fa fa-heart"></i></a></li> #}
+                        {#                                        </ul> #}
+                        {#                                    </div> #}
+                        {#                                    <div class="product-content"> #}
+                        {#                                        <h3 class="title"><a href="#">Nom du Produit</a></h3> #}
+                        {#                                        <ul class="rating"> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="far fa-star"></li> #}
+                        {#                                        </ul> #}
+                        {#                                        <span class="product-category"><a href="#"><b>300 dhs au lieu de <strike #}
+                        {#                                                            style='color:black'>350 dhs</strike></b></a></span> #}
+                        {#                                        #}{# <div class="price">$55.55</div> #}
+                        {#                                        <a href="#" class="add-to-cart"><i class="fas fa-cart-plus"></i> Ajouter aux #}
+                        {#                                            panier</a> #}
+                        {#                                    </div> #}
+                        {#                                </div> #}
+                        {#                            </div> #}
+                        {#                        </div> #}
+
+                        {#                        <div class="swiper-slide"> #}
+                        {#                            <div style="border: none" class="blog-card"> #}
+                        {#                                <div class="product-grid-home"> #}
+                        {#                                    <div class="product-image"> #}
+                        {#                                        <a href="#" class="image"> #}
+                        {#                                            <img src="img/product/product_1_7.jpg"> #}
+                        {#                                        </a> #}
+                        {#                                        <span class="product-sale-label clipped">-15%</span> #}
+                        {#                                        <ul class="product-links"> #}
+                        {#                                            <li><a href="#" data-tip="Add to Wishlist"><i #}
+                        {#                                                            class="fas fa-cart-arrow-down"></i></a> #}
+                        {#                                            </li> #}
+                        {#                                            <li><a href="#" data-tip="Compare"><i class="fa fa-search"></i></a></li> #}
+                        {#                                            <li><a href="#" data-tip="Quick View"><i class="fa fa-heart"></i></a></li> #}
+                        {#                                        </ul> #}
+                        {#                                    </div> #}
+                        {#                                    <div class="product-content"> #}
+                        {#                                        <h3 class="title"><a href="#">Nom du Produit</a></h3> #}
+                        {#                                        <ul class="rating"> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="far fa-star"></li> #}
+                        {#                                        </ul> #}
+                        {#                                        <span class="product-category"><a href="#"><b>300 dhs au lieu de <strike #}
+                        {#                                                            style='color:black'>350 dhs</strike></b></a></span> #}
+                        {#                                        #}{# <div class="price">$55.55</div> #}
+                        {#                                        <a href="#" class="add-to-cart"><i class="fas fa-cart-plus"></i> Ajouter aux #}
+                        {#                                            panier</a> #}
+                        {#                                    </div> #}
+                        {#                                </div> #}
+                        {#                            </div> #}
+                        {#                        </div> #}
+
+                        {#                        <div class="swiper-slide"> #}
+                        {#                            <div style="border: none" class="blog-card"> #}
+                        {#                                <div class="product-grid-home"> #}
+                        {#                                    <div class="product-image"> #}
+                        {#                                        <a href="#" class="image"> #}
+                        {#                                            <img src="img/product/product_1_8.jpg"> #}
+                        {#                                        </a> #}
+                        {#                                        <span class="product-sale-label clipped">-15%</span> #}
+                        {#                                        <ul class="product-links"> #}
+                        {#                                            <li><a href="#" data-tip="Add to Wishlist"><i #}
+                        {#                                                            class="fas fa-cart-arrow-down"></i></a> #}
+                        {#                                            </li> #}
+                        {#                                            <li><a href="#" data-tip="Compare"><i class="fa fa-search"></i></a></li> #}
+                        {#                                            <li><a href="#" data-tip="Quick View"><i class="fa fa-heart"></i></a></li> #}
+                        {#                                        </ul> #}
+                        {#                                    </div> #}
+                        {#                                    <div class="product-content"> #}
+                        {#                                        <h3 class="title"><a href="#">Nom du Produit</a></h3> #}
+                        {#                                        <ul class="rating"> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="fas fa-star"></li> #}
+                        {#                                            <li class="far fa-star"></li> #}
+                        {#                                        </ul> #}
+                        {#                                        <span class="product-category"><a href="#"><b>300 dhs au lieu de <strike #}
+                        {#                                                            style='color:black'>350 dhs</strike></b></a></span> #}
+                        {#                                        #}{# <div class="price">$55.55</div> #}
+                        {#                                        <a href="#" class="add-to-cart"><i class="fas fa-cart-plus"></i> Ajouter aux #}
+                        {#                                            panier</a> #}
+                        {#                                    </div> #}
+                        {#                                </div> #}
+                        {#                            </div> #}
+                        {#                        </div> #}
+
+                    </div>
+                </div>
+                <button data-slider-prev="#productSlider1" class="slider-arrow slider-prev"><i
+                            class="far fa-arrow-left"></i></button>
+                <button data-slider-next="#productSlider1" class="slider-arrow slider-next"><i
+                            class="far fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Start Activities -->
+    <div class="container-fluid">
+        <div class="center policy-shop">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="item">
+                            <div class="icon">
+                                <img class="mark-lazy" src="img/ship-img.png" style="width: 60%;"
+                                     data-src="img/ship-img.png" alt="fast-delivery">
+                            </div>
+                            <div class="info">
+                                <h3>Livraison sous 24/48h Partout au maroc</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="item">
+                            <div class="icon">
+                                <img class="mark-lazy" src="img/check.png" style="width: 60%;"
+                                     data-src="img/check.png" alt="fast-delivery">
+                            </div>
+                            <div class="info">
+                                <h3>Produits innovants et uniques sur le marché</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="item">
+                            <div class="icon">
+                                <img class="mark-lazy" src="img/crc-img.png" style="width: 60%;"
+                                     data-src="img/crc-img.png" alt="headphones">
+                            </div>
+                            <div class="info">
+                                <h3>Équipe commerciale et technique réactive</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="item">
+                            <div class="icon">
+                                <img class="mark-lazy" src="img/nice-img.png" style="width: 60%;"
+                                     data-src="img/nice-img.png" alt="payment">
+                            </div>
+                            <div class="info">
+                                <h3>Rapport qualité prix compétitif</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- End Activities -->
+    </div>
+
+    <!-- End Products  -->
+
+    {# Start Certificats #}
+
+    <div class="row justify-content-lg-between justify-content-center align-items-center">
+        <div class="col-lg">
+            <div class="title-area text-center text-lg-start">
+                        <span class="sub-title">
+                            <img src="{{ asset('img/theme-img/title_icon.svg') }}"
+                                 alt="shape">Nos Certificats</span>
+                <img src="img/under-title.png" style="width: 25%;" class="under-title" alt="under-title"/>
+            </div>
+        </div>
+    </div>
+    <p class="center mb-2">
+        <img src="img/certif-img.png" height="100" width="250" alt="certificat"/>
+    </p>
+    {# end Certificats #}
+    <br/>
+
+    <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+    {% block javascripts %}
+
+        <script>
+            $(document).ready(function () {
+                $('.carousel').carousel();
+            });
+        </script>
+
+    {% endblock %}
+    </div>
+{% endblock %}

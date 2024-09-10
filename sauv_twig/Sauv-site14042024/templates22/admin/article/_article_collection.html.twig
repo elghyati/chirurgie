@@ -1,0 +1,110 @@
+{% block _admin_article_widget %}
+    <div class="col-sm">
+        {{ form_label(form.reference) }}
+        {{ form_widget(form.reference) }}
+        {{ form_errors(form.reference) }}
+    </div>
+    <div class="col-sm">
+        {{ form_label(form.designation) }}
+        {{ form_widget(form.designation) }}
+        {{ form_errors(form.designation) }}
+    </div>
+    <div class="col-sm">
+        {{ form_label(form.description) }}
+        {{ form_widget(form.description) }}
+        {{ form_errors(form.description) }}
+    </div>
+
+    <div class="col-sm">
+        {{ form_label(form.imageFile) }}
+        {{ form_widget(form.imageFile) }}
+        {{ form_errors(form.imageFile) }}
+    </div>
+    <div class="col-sm">
+        <div class="row py-2">
+            <div class="col-sm">
+                <div class="row">
+                    <div class="col-sm-4">
+                        {{ form_label(form.price) }}
+                    </div>
+                    <div class="col">
+                        {{ form_widget(form.price) }}
+                        {{ form_errors(form.price) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="row">
+                    <div class="col-sm-4">
+                        {{ form_label(form.priceProfessional) }}
+                    </div>
+                    <div class="col">
+                        {{ form_widget(form.priceProfessional) }}
+                        {{ form_errors(form.priceProfessional) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="row">
+                    <div class="col-sm-4">
+                        {{ form_label(form.priceDealer) }}
+                    </div>
+                    <div class="col">
+                        {{ form_widget(form.priceDealer) }}
+                        {{ form_errors(form.priceDealer) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm">
+        {{ form_label(form.sousFamille) }}
+        {{ form_widget(form.sousFamille) }}
+        {{ form_errors(form.sousFamille) }}
+    </div>
+    <div class="row py-3 px-4 my-2 border border-primary">
+        <div class="col">
+            <h6> {{ form_label(form.images) }} </h6>
+            <div class="row py-1 bg-light">
+                <div class="col-1 text-bold text-center"> </div>
+                <div class="col-2 text-bold text-center">Fichier</div>
+                <div class="col text-bold text-center">Libellé</div>
+
+                <div class="col-1"></div>
+            </div>
+            {{ form_widget(form.images) }}
+            {{ form_errors(form.images) }}
+            <input type="hidden" id="widgets-images-counter" value="0">
+            <div class="form-group">
+                <button type="button" id="add-image" class="btn btn-primary"><i class="fa fa-plus"></i> Ajouter une image</button>  
+            </div>
+        </div>
+    </div>
+    <div class="row py-3 px-4 my-2 border border-primary">
+        <div class="col">
+            <h6> {{ form_label(form.variants) }} </h6>
+            <div class="row py-1 bg-light">
+                <div class="col-2 text-bold text-center">Référence</div>
+                <div class="col text-bold text-center">Taille</div>
+                <div class="col text-bold text-center">Couleur</div>
+                <div class="col text-bold text-center">Prix particulier</div>
+                <div class="col text-bold text-center">Prix professionnel</div>
+                <div class="col text-bold text-center">Prix revendeur</div>
+                <div class="col text-bold text-center">Marque</div>
+                {#                <div class="col text-bold text-center">Remisé</div>#}
+                <div class="col text-bold text-center">Remise</div>
+                <div class="col text-bold text-center">En stock</div>
+
+                <div class="col-1"></div>
+            </div>
+            {{ form_widget(form.variants) }}
+            {{ form_errors(form.variants) }}
+            <input type="hidden" id="widgets-variants-counter" value="0">
+            <input type="hidden" id="widgets-images_variant-counter" value="0">
+            <div class="form-group">
+                <button type="button" id="add-variant" class="btn btn-primary"><i class="fa fa-plus"></i> Ajouter une variante</button>  
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

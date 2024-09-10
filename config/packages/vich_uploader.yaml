@@ -1,0 +1,67 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        user_images:
+            uri_prefix: '%user_images%'
+            upload_destination: '%kernel.project_dir%/public/%user_images%'
+            inject_on_load: false
+            delete_on_remove: true
+            delete_on_update: true
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        article_images:
+            uri_prefix: '%article_images%'
+            upload_destination: '%kernel.project_dir%/public/%article_images%'
+            inject_on_load: false
+            delete_on_remove: true
+            delete_on_update: true
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        arrival_images:
+            uri_prefix: '%arrival_images%'
+            upload_destination: '%kernel.project_dir%/public/%arrival_images%'
+            inject_on_load: false
+            delete_on_remove: true
+            delete_on_update: true
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        promotion_images:
+            uri_prefix: '%promotion_images%'
+            upload_destination: '%kernel.project_dir%/public/%promotion_images%'
+            inject_on_load: false
+            delete_on_remove: true
+            delete_on_update: true
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        middle_images:
+            uri_prefix: '%middle_images%'
+            upload_destination: '%kernel.project_dir%/public/%middle_images%'
+            inject_on_load: false
+            delete_on_remove: true
+            delete_on_update: true
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        header_images:
+            uri_prefix: '%middle_images%'
+            upload_destination: '%kernel.project_dir%/public/%header_images%'
+            inject_on_load: false
+            delete_on_remove: true
+            delete_on_update: true
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        famille_images:
+            uri_prefix: '%famille_images%'
+            upload_destination: '%kernel.project_dir%/public/%famille_images%'
+            inject_on_load: false
+            delete_on_remove: true
+            delete_on_update: true
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        sous_famille_images:
+            uri_prefix: '%sous_famille_images%'
+            upload_destination: '%kernel.project_dir%/public/%sous_famille_images%'
+            inject_on_load: false
+            delete_on_remove: true
+            delete_on_update: true
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        brand_images:
+            uri_prefix: '%brand_images%'
+            upload_destination: '%kernel.project_dir%/public/%brand_images%'
+            inject_on_load: false
+            delete_on_remove: true
+            delete_on_update: true
+            namer: Vich\UploaderBundle\Naming\UniqidNamer

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PHPUnit">
+    <option name="directories">
+      <list>
+        <option value="$PROJECT_DIR$/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/doctrine-bundle/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/migrations/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/persistence/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/ocramius/proxy-manager/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/laminas/laminas-code/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/data-fixtures/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/laminas/laminas-zendframework-bridge/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/reflection/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/inflector/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/laminas/laminas-eventmanager/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/doctrine-migrations-bundle/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/event-manager/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/orm/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/lexer/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/cocur/slugify/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/fzaninotto/faker/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/collections/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/composer/package-versions-deprecated/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/annotations/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/cache/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/nikic/php-parser/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/vich/uploader-bundle/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/common/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/doctrine-fixtures-bundle/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/jms/metadata/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/monolog/monolog/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/webmozart/assert/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/egulias/email-validator/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/dbal/tests" />
+        <option value="$PROJECT_DIR$/vendor09072024/doctrine/instantiator/tests" />
+      </list>
+    </option>
+  </component>
+</project>

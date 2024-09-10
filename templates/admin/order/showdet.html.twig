@@ -1,0 +1,79 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Hello OrderController!{% endblock %}
+
+{% block body %}
+
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Gestion des commandes</h4>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ path('admin_dashboard_index') }}">ChirurgieMed</a></li>
+                            <li class="breadcrumb-item active">Commandes</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="page-content-wrapper">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card m-b-20">
+                            <div class="card-body">
+
+
+
+                                <h4 class="mt-0 header-title">Liste détails des commandes</h4>
+                                <table id="datatable-buttons" class="table table-striped dt-responsive table-hover nowrap"  style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+
+                                    <thead class="table-dark">
+                                    <th>ID COMMANDE</th>
+                                    <th>Prix</th>
+                                    <th>Quantité</th>
+                                    <th>Total</th>
+                                    <th>Seq</th>
+                                    <th>Article</th>
+                                    <th></th>
+                                    </thead>
+                                    <tbody>
+
+                                        {% for dorder in dorders %}
+                                            <tr border-bottom>
+                                                <td> {{ dorder.id }}</td>
+                                                <td> {{ dorder.price }}</td>
+                                                <td> {{ dorder.quantity }}</td> 
+                                                <td> {{ dorder.subTotal }}</td>
+                                                <td> {{ dorder.sequence }}</td>
+                                                <td> {{ dorder.article }}</td>
+
+
+
+                                                <td class="ali">
+                                                    <div class="form-inline justify-content-center">
+                                                        <a href="{{ path('admin_order_detail', {'id': dorder.id}) }}" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title data-original-title="Détails" ><i class="fas fa-eye"></i>  </a>
+                                                        <a href="{{ path('admin_order_edit', {'id': dorder.id}) }}" class="btn btn-primary mr-2" data-toggle="tooltip" data-placement="top" title data-original-title="Modifier"><i class="fas fa-pencil-alt"></i>  </a>
+                                                    </div> 
+                                                </td>
+
+
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+            </div>
+            {#   <a class="btn btn-success" href="#" style="margin-top: 15px;">Valider</a>
+               <a class="btn btn-dark" href="#" style="margin-top: 15px;">Quitter</a>
+   #}
+
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+
+{% endblock %}

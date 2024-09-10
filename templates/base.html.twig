@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>{% block title %}Chirurgie Med{% endblock %}</title>
+    <!-- TemplateEndEditable -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{{ asset('admin/images/favicon.ico') }}">
+    {# <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png')}}"> #}
+
+    <!--==============================
+          Google Fonts
+        ============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <!-- FontAwsome CSS -->
+    <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+    <!-- Responsive CSS -->
+{#    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">#}
+{#    <!-- Custom CSS -->#}
+{#    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">#}
+
+    {#    <link rel="stylesheet" href="{{ asset('css/all.css') }}">#}
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.min.css') }}">
+    <!-- Swiper Js -->
+    <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
+    <!-- datetimepicker -->
+    <link rel="stylesheet" href="{{ asset('css/jquery.datetimepicker.min.css') }}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{{ asset('css/style-new.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+
+    {% block stylesheets %}{% endblock %}
+</head>
+
+<body>
+<!-- Start Main Top -->
+<div class="main-top" style="height: 34px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+{#                <div class="right-phone-box">#}
+{#                    <p><i class="fa fa-phone"></i> <a href="#"> +212 661 800 100</a></p>#}
+{#                </div>#}
+{#                <div class="our-link">#}
+{#                    <ul>#}
+{#                        <li><a href="#"><i class="fas fa-location-arrow"></i> Localisation</a></li>#}
+{#                        <li><a href="{{ path('contact') }}"><i class="fas fa-headset"></i> Contactez-nous</a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+                <div class="text-container">
+{#                    <p id="movingText">-20% pour tout achat code Promo : offT80 || -50% à - 80% pour thermomètres || -10%! Achat meubles || -50%! Pour tout achat immédiat</p>#}
+                    <p id="movingText">
+                        {{getSlugan()[0].slugan}}
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="our-link" style="float: right;">
+{#                    <ul>#}
+{#                        {% if app.user %}#}
+{#                            <li>#}
+{#                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="accountDropLink">#}
+{#                                    <i class="fas fa-user"></i>#}
+{#                                    {{ app.user.fullName }}#}
+{#                                </a>#}
+{#                                <div class="dropdown-menu main-top" aria-labelledby="accountDropLink">#}
+{#                                    <a href="{{ path('user_index') }}" class="dropdown-item">Mon compte</a>#}
+{#                                    <a href="{{ path('user_profile') }}" class="dropdown-item">Modifier mon profil</a>#}
+{#                                    <div class="dropdown-divider"></div>#}
+{#                                    <a href="{{ path('customer_logout') }}" class="dropdown-item">Déconnexion</a>#}
+
+{#                                </div>#}
+{#                            </li>#}
+{#                        {% else %}#}
+{#                            <li>#}
+{#                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"#}
+{#                                   id="accountDropLink">#}
+{#                                    <i class="fas fa-user"></i>#}
+{#                                    Mon Compte#}
+{#                                </a>#}
+{#                                <div class="dropdown-menu main-top" aria-labelledby="accountDropLink">#}
+{#                                    <a href="{{ path('customer_login') }}" class="dropdown-item">Connexion</a>#}
+{#                                    <a href="{{ path('customer_register') }}" class="dropdown-item">Inscription</a>#}
+
+{#                                </div>#}
+{#                            </li>#}
+{#                        {% endif %}#}
+{#                    </ul>#}
+                </div>
+
+{#                <div class="text-slid-box">#}
+{#                    <div id="offer-box" class="carouselTicker">#}
+{#                        <ul class="offer-box">#}
+{#                            <li><i class="fab fa-opencart"></i> -20% pour tout achat code Promo : offT80</li>#}
+{#                            <li><i class="fab fa-opencart"></i> -50% à - 80% pour thermomètres</li>#}
+{#                            <li><i class="fab fa-opencart"></i> -10%! Achat meubles</li>#}
+{#                            <li><i class="fab fa-opencart"></i> -50%! Pour tout acaht immédiat</li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                </div>#}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- End Main Top -->
+<!--==============================
+    Sidemenu
+============================== -->
+<div class="sidemenu-wrapper sidemenu-info ">
+    <div class="sidemenu-content">
+        <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
+        <div class="widget  ">
+            <div class="th-widget-about">
+                <div class="about-logo">
+                    <a href="{{ path('home_index') }}">
+                        <img src="{{ asset('img/logo.png') }}" alt="chirurgiemed">
+                    </a>
+                </div>
+                <p class="about-text">Fondée en 2013, CHIRURGIE-MED est une société citoyenne spécialisée dans
+                    l’importation et la distribution des dispositifs médicaux, matériels et consommables de qualité.</p>
+                <p class="footer-info">
+                    <i class="fal fa-location-dot"></i>
+                    Lot belfquih, 91 av.Tarik ibn ziad – <br> Temara - Maroc
+                </p>
+                <p class="footer-info">
+                    <i class="fal fa-envelope"></i>
+                    <a href="mailto:contact@chirurgiemed.ma" class="info-box_link">
+                        contact@chirurgiemed.ma</a>
+                </p>
+                <p class="footer-info">
+                    <i class="fal fa-phone"></i>
+                    <a href="tel:+212637721592" class="info-box_link">+(212) 637 721 592</a>
+                </p>
+                <div class="th-social">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-search-box d-none d-lg-block">
+    <button class="searchClose"><i class="fal fa-times"></i></button>
+    <form action="#">
+        <input type="text" placeholder="What are you looking for?">
+        <button type="submit"><i class="fal fa-search"></i></button>
+    </form>
+</div><!--==============================
+    Mobile Menu
+  ============================== -->
+<div class="th-menu-wrapper">
+    <div class="th-menu-area text-center">
+        <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+        <div class="mobile-logo">
+            <a href="{{ path('home_index') }}">
+                <img src="{{ asset('img/logo.png') }}" alt="chirurgiemed">
+            </a>
+        </div>
+        <div class="th-mobile-menu">
+            <ul>
+                <li>
+                    <a href="{{ path('home_index') }}">Accueil</a>
+                </li>
+                <li>
+                    <a href="{{ path('article_shop') }}">Produits</a>
+                </li>
+                <li>
+                    <a href="{{ path('aboutus') }}">À Propos</a>
+                </li>
+                <li>
+                    <a href="{{ path('contact') }}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div><!--==============================
+	Header Area
+==============================-->
+<header class="th-header header-layout2">
+    <div class="menu-top">
+        <div class="container">
+            <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
+                <div class="col-auto d-none d-lg-block">
+                    <div class="w-50 header-logo">
+                        <a href="{{ path('home_index') }}"><img src="{{ asset('img/logo.png') }}" alt="chirurgiemed"></a>
+                    </div>
+                </div>
+                <div class="col-auto " style="display: none;" >
+                    <form class="search-form">
+                        <input type="text" placeholder="Search Here...">
+                        <button type="submit"><i class="far fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <div class="info-card-wrap">
+                        <div class="info-card">
+                            <div class="box-icon">
+                                <i class="fal fa-headset"></i>
+                            </div>
+                            <div class="box-content">
+                                <p class="box-text">Contactez Nous</p>
+                                <h4 class="box-title"><a href="tel:+1636543569">+212-682-331-632</a></h4>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="box-icon">
+                                <i class="fal fa-clock"></i>
+                            </div>
+                            <div class="box-content">
+                                <p class="box-text">Lundi - Samedi</p>
+                                <h4 class="box-title">Ouvert 7j/7</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sticky-wrapper">
+        <div class="menu-area">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-auto d-none d-lg-inline-block">
+                        <nav class="main-menu menu-style1">
+                            <ul>
+                                <li>
+                                    <a href="{{ path('home_index') }}">Accueil</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('article_shop') }}">Produits</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('aboutus') }}">À Propos</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('contact') }}">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-auto d-inline-block d-lg-none">
+                        <div class="header-logo">
+                            <a href="{{ path('home_index') }}"><img src="{{ asset('img/logo.png') }}" alt="chirurgiemed"></a>
+                        </div>
+                    </div>
+                    <div class="col-auto ms-auto">
+                        <div class="header-button">
+                            <button type="button" class="icon-btn sideMenuCart">
+{#                                <span class="badge">5</span>#}
+                                <i class="fal fa-cart-shopping"></i>
+                            </button>
+                            <button type="button" class="icon-btn sideMenuInfo d-none d-lg-inline-block"><i
+                                        class="fal fa-bars"></i></button>
+                            <button type="button" class="th-menu-toggle d-block d-lg-none"><i class="far fa-bars"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% block body %}{% endblock %}
+<!--==============================
+Footer Area
+==============================-->
+<footer class="footer-wrapper footer-layout2" data-bg-src="{{ asset('img/bg/footer_bg_2.jpg') }}">
+    <div class="widget-area">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-6 col-xl-auto">
+                    <div class="widget footer-widget">
+                        <h3 class="widget_title">Contact Us</h3>
+                        <div class="th-widget-contact">
+                            <p class="footer-text">Restez informé de nos dernières actualités et offres spéciales.</p>
+                            <p class="footer-info">
+                                <i class="fal fa-location-dot"></i>
+                                Lot belfquih – Temara - Maroc
+                            </p>
+                            <p class="footer-info">
+                                <i class="fal fa-envelope"></i>
+                                <a href="mailto:contact@chirurgiemed.ma" class="info-box_link">pro@chirurgiemed.ma/info@chirurgiemed.ma</a>
+                            </p>
+                            <p class="footer-info">
+                                <i class="fal fa-phone"></i>
+                                <span><a href="tel:+212637721592" class="info-box_link">+(212) 537 646 547</a></span>
+                                <div><a href="tel:+212682331632" class="info-box_link">+(212) 537 627 212</a></div>
+                            </p>
+                            <div class="th-social">
+                                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-auto">
+                    <div class="widget widget_nav_menu footer-widget">
+                        <h3 class="widget_title">Liens Utiles</h3>
+                        <div class="menu-all-pages-container">
+                            <ul class="menu">
+                                <li><a href="{{ path('home_index') }}">Accueil</a></li>
+{#                                <li><a href="about.html">Nos Produits</a></li>#}
+                                <li><a href="{{ path('article_shop') }}">Nos Produits</a></li>
+                                <li><a href="{{ path('aboutus') }}">À propos</a></li>
+                                <li><a href="{{ path('contact') }}">Contact Nous</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-auto">
+                    <div class="widget widget_nav_menu footer-widget">
+                        <h3 class="widget_title">Information</h3>
+                        <div class="menu-all-pages-container">
+                            <ul class="menu">
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Politique de confidentialité</a></li>
+                                <li><a href="#">Conditions d'utilisation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-auto">
+                    <div class="widget footer-widget">
+                        <h3 class="widget_title">Abonnement</h3>
+                        <div class="newsletter-widget">
+                            <p class="footer-text">Abonnez-vous à la newsletter</p>
+                            <form action="#" class="newsletter-form">
+                                <div class="form-group">
+                                    <input class="form-control" type="email" placeholder="Enter Email" required="">
+                                </div>
+                                <button type="submit" class="simple-icon"><i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </form>
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox" name="checkbox">
+                                <label for="checkbox">J'accepte les termes et conditions</label>
+                            </div>
+                            <div class="btn-group">
+                                <a href="https://play.google.com/" class="img-btn">
+                                    <img src="{{ asset('img/normal/apple_store.png') }}" alt="icon">
+                                </a>
+                                <a href="https://play.google.com/" class="img-btn">
+                                    <img src="{{ asset('img/normal/play_store.png') }}" alt="icon">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-wrap">
+        <div class="container">
+            <div class="row gy-2 align-items-center">
+                <div class="col-md-7">
+                    <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a
+                                href="{{ path('home_index') }}">Chirurgiemed</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-5 text-center text-md-end">
+                    <div class="payment-img">
+                        <img src="{{ asset('img/payment_methods.png') }}" alt="Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--********************************
+        Code End  Here
+******************************** -->
+
+<!-- Scroll To Top -->
+<div class="scroll-top">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+              style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+    </svg>
+</div>
+
+
+
+<!--==============================
+All Js File
+============================== -->
+<!-- Jquery -->
+<script src="{{ asset('js/vendor/jquery-3.7.1.min.js') }}"></script>
+<!-- Swiper Js -->
+<script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
+<!-- Bootstrap -->
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<!-- Magnific Popup -->
+<script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+<!-- Counter Up -->
+<script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
+<!-- datetimepicker -->
+<script src="{{ asset('js/jquery.datetimepicker.min.js') }}"></script>
+<!-- Range Slider -->
+<script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+<!-- Isotope Filter -->
+<script src="{{ asset('js/imagesloaded.pkgd.min.js') }}"></script>
+<script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+<!-- Main Js File -->
+<script src="{{ asset('js/main.js') }}"></script>
+
+<script src="{{ asset('js/jquery.superslides.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap-select.js') }}"></script>
+<script src="{{ asset('js/inewsticker.js') }}"></script>
+<script src="{{ asset('js/bootsnav.js') }}"></script>
+<script src="{{ asset('js/images-loded.min.js') }}"></script>
+<script src="{{ asset('js/isotope.min.js') }}"></script>
+<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('js/baguetteBox.min.js') }}"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Client{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Administration des clients</h4>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ path('admin_dashboard_index') }}">ChirurgieMed</a></li>
+                            <li class="breadcrumb-item"><a href="{{ path('admin_famille_index') }}">Familles</a></li>
+                            <li class="breadcrumb-item active">Consultation</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+            <div class="page-content-wrapper">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card m-b-20">
+                            <div class="card-body">
+                                <h4 class="mb-3 header-title">Fiche de '{{ customer.firstName }} {{ customer.lastName }}'</h4>
+
+                                <table class="table my-5">
+                                    <tbody>
+                                        <tr>
+                                            <th>ID</th>
+                                            <td>{{ customer.id }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Civilité</th>
+                                            <td>{{ customer.civilite }}</td>
+                                        </tr>
+                                        {#<tr>
+                                            <th>Avatar</th>
+                                                {#<td>{{ customer.picture }}</td># }
+                                            <td><img src="{{ asset('uploads/images/customers/' ~ customer.picture) }}" /> </td>
+                                        </tr>#}
+                                        <tr>
+                                            <th>Nom</th>
+                                            <td>{{ customer.firstName }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Prénom</th>
+                                            <td>{{ customer.lastName }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Type</th>
+                                            <td>{{ customer.customerType == 'DLR'?'Revenendeur':customer.customerType == 'PRF'?'Professionnel':'Particulier'}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>E-mail</th>
+                                            <td>{{ customer.email }}</td>
+                                        </tr>
+                                        {#  <tr>
+                                              <th>Hash</th>
+                                              <td>{{ customer.hash }}</td>
+                                          </tr>#}                                
+                                        <tr>
+                                            <th>Introduction</th>
+                                            <td>{{ customer.introduction }}</td>
+                                        </tr>
+                                        {#   <tr>
+                                               <th>Slug</th>
+                                               <td>{{ customer.slug }}</td>
+                                           </tr> #}
+                                        <tr>
+                                            <th>Profession</th>
+                                            <td>{{ customer.job }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Société</th>
+                                            <td>{{ customer.company }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Adresse</th>
+                                            <td>{{ customer.adresse }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Ville</th>
+                                            <td>{{ customer.ville }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Code Postal</th>
+                                            <td>{{ customer.codePostal }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Actif</th>
+                                            <td>
+                                                <input type="checkbox" id="switch{{ customer.id }}" disabled="false" switch="none" {{ customer.enabled ? 'checked' : 'unchecked' }}/>
+                                                <label for="switch{{ customer.id }}"></label>
+                                            </td>
+                                        <tr>
+                                            <th>Tel</th>
+                                            <td>{{ customer.tel }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>GSM</th>
+                                            <td>{{ customer.gsm }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="form-inline align-items-lg-center my-3">
+                                    <a class="btn btn-success mr-3" href="{{ path('admin_customer_index') }}"><i class="fas fa-chevron-left"></i> Retour à la liste</a>
+                                    <a class="btn btn-danger mr-3" href="{{ path('admin_customer_edit', {'id': customer.id}) }}"><i class="fas fa-pencil-alt"></i> Modifier</a>
+                                    {#                                    {{ include('admin/customer/__delete_form.html.twig') }}#}
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+            </div>
+            <!-- end page content-->
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+{% endblock %}
+

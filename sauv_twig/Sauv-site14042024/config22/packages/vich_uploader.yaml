@@ -1,0 +1,39 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        user_images:
+            uri_prefix: '%user_images%'
+            upload_destination: '%kernel.project_dir%/../public_html/%user_images%'
+            inject_on_load: false
+            delete_on_remove: true
+            delete_on_update: true
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        article_images:
+            uri_prefix: '%article_images%'
+            upload_destination: '%kernel.project_dir%/../public_html/%article_images%'
+            inject_on_load: false
+            delete_on_remove: true
+            delete_on_update: true
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        famille_images:
+            uri_prefix: '%famille_images%'
+            upload_destination: '%kernel.project_dir%/../public_html/%famille_images%'
+            inject_on_load: false
+            delete_on_remove: true
+            delete_on_update: true
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        sous_famille_images:
+            uri_prefix: '%sous_famille_images%'
+            upload_destination: '%kernel.project_dir%/../public_html/%sous_famille_images%'
+            inject_on_load: false
+            delete_on_remove: true
+            delete_on_update: true
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        brand_images:
+            uri_prefix: '%brand_images%'
+            upload_destination: '%kernel.project_dir%/../public_html/%brand_images%'
+            inject_on_load: false
+            delete_on_remove: true
+            delete_on_update: true
+            namer: Vich\UploaderBundle\Naming\UniqidNamer

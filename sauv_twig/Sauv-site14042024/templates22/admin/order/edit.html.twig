@@ -1,0 +1,59 @@
+{% extends 'admin/base.html.twig' %}
+
+{% form_theme form with ['admin/order/_order_collection.html.twig'] %}
+{% form_theme form.orderDetails with ['admin/order/_details_collection.html.twig'] %}
+
+{% block title %}Modification de la commande : {{ order.id }} !{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Administration des commandes</h4>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ path('admin_dashboard_index') }}">ChirurgieMed</a></li>
+                            <li class="breadcrumb-item"><a href="{{ path('admin_order_index') }}">Commandes</a></li>
+                            <li class="breadcrumb-item active">Edition</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+            <div class="page-content-wrapper">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card m-b-20">
+                            <div class="card-body">
+                                <h4 class="mb-3 header-title">Modification de '{{ order.reference }}'</h4>
+                                {{ include('admin/order/_form.html.twig', {'button_label': 'Enregistrer les modifications'}) }}
+                                <div class="form-inline align-items-lg-center my-3">
+                                    <a class="btn btn-success mr-3" href="{{ path('admin_order_index') }}"><i class="fas fa-chevron-left"></i> Retour à la liste</a>
+                                    {{ include('admin/order/__delete_form.html.twig') }}
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+            </div>
+            <!-- end page content-->
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+{% endblock %}
+
+
+{% block javascripts %}
+    
+
+    <script>
+        $(document).ready(function () {
+            initSelect2();
+        });
+
+        function initSelect2() {
+            $('select').select2();
+        }
+    </script>
+    <script src="{{ asset('admin/js/orderDetail.js')}}"></script>
+{% endblock %}

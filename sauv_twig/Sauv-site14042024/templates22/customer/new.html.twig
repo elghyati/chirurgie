@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{#{% form_theme form with ['admin/article/_image_collection.html.twig'] %}#}
+
+{% block title %}Ajout d'un nouvel utilisateur !{% endblock %}{% block body %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Inscription</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+            <div class="page-content-wrapper">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card m-b-20">
+                            <div class="card-body">
+                                <h4 class="mb-3 header-title">Inscription au site</h4>
+                                {{ include('customer/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+                                <div class="form-inline align-items-lg-center my-3">
+                                    <a class="btn btn-success mr-3" href="{{ path('home_index') }}"><i class="fas fa-chevron-left"></i> Retour à la page d'accueil</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+            </div>
+            <!-- end page content-->
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('admin/js/size.js')}}"></script>
+    <script src="{{ asset('admin/js/image.js')}}"></script>
+    <script src="{{ asset('admin/plugins/tinymce/tinymce.min.js')}}"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('select').select2();
+            if ($("#admin_user_description").length > 0) {
+                tinymce.init({
+                    selector: "textarea#admin_user_description",
+                    theme: "modern",
+                    height: 300,
+                    plugins: [
+                        "advlist lists charmap preview hr spellchecker",
+                        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime nonbreaking",
+                        "save table contextmenu directionality template paste textcolor"
+                    ],
+        {#plugins: [
+            "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+            "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+            "save table contextmenu directionality emoticons template paste textcolor"
+        ],#}
+                        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+                        style_formats: [
+                            {title: 'Bold text', inline: 'b'},
+                            {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+        {# {title: 'Titre 1', block: 'h1', styles: {color: '#ff0000'}},#}
+                            {title: 'Titre 1', block: 'h1'},
+                            {title: 'Titre 2', block: 'h2'},
+                            {title: 'Titre 3', block: 'h3'},
+                            {title: 'Titre 4', block: 'h4'},
+                            {title: 'Example 1', inline: 'span', classes: 'example1'},
+                            {title: 'Example 2', inline: 'span', classes: 'example2'},
+                            {title: 'Table styles'},
+                            {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+                        ]
+                    });
+                }
+            });
+            $('#admin_user_imageFile').on('change', function () {
+                //get the file name
+                var fileName = $(this).val();
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            });
+    </script>
+{% endblock %}
+
+
+{#{% extends 'base.html.twig' %}
+
+{% block title %}New User{% endblock %}
+
+{% block body %}
+    <h1>Create new User</h1>
+
+    {{ include('admin/user/_form.html.twig') }}
+
+    <a href="{{ path('admin_user_index') }}">back to list</a>
+{% endblock %}
+#}

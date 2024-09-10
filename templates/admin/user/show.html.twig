@@ -1,0 +1,117 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Utilisateur{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Administration des utili</h4>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ path('admin_dashboard_index') }}">ChirurgieMed</a></li>
+                            <li class="breadcrumb-item"><a href="{{ path('admin_famille_index') }}">Familles</a></li>
+                            <li class="breadcrumb-item active">Consultation</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+            <div class="page-content-wrapper">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card m-b-20">
+                            <div class="card-body">
+                                <h4 class="mb-3 header-title">Fiche de '{{ user.firstName }} {{ user.lastName }}'</h4>
+
+                                <table class="table my-5">
+                                    <tbody>
+                                        <tr>
+                                            <th>ID</th>
+                                            <td>{{ user.id }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Civilité</th>
+                                            <td>{{ user.civilite }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Avatar</th>
+                                                {#<td>{{ user.picture }}</td>#}
+                                            <td><img src="{{ asset('uploads/images/users/' ~ user.picture) }}" /> </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nom</th>
+                                            <td>{{ user.firstName }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Prénom</th>
+                                            <td>{{ user.lastName }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>E-mail</th>
+                                            <td>{{ user.email }}</td>
+                                        </tr>
+                                        {#  <tr>
+                                              <th>Hash</th>
+                                              <td>{{ user.hash }}</td>
+                                          </tr>#}                                
+                                        <tr>
+                                            <th>Introduction</th>
+                                            <td>{{ user.introduction }}</td>
+                                        </tr>
+                                        {#   <tr>
+                                               <th>Slug</th>
+                                               <td>{{ user.slug }}</td>
+                                           </tr> #}
+                                        <tr>
+                                            <th>Profession</th>
+                                            <td>{{ user.job }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Société</th>
+                                            <td>{{ user.company }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Adresse</th>
+                                            <td>{{ user.adresse }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Ville</th>
+                                            <td>{{ user.ville }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Code Postal</th>
+                                            <td>{{ user.codePostal }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Actif</th>
+                                            <td>
+                                                <input type="checkbox" id="switch{{ user.id }}" disabled="false" switch="none" {{ user.enabled ? 'checked' : 'unchecked' }}/>
+                                                <label for="switch{{ user.id }}"></label>
+                                            </td>
+                                        <tr>
+                                            <th>Tel</th>
+                                            <td>{{ user.tel }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>GSM</th>
+                                            <td>{{ user.gsm }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="form-inline align-items-lg-center my-3">
+                                    <a class="btn btn-success mr-3" href="{{ path('admin_user_index') }}"><i class="fas fa-chevron-left"></i> Retour à la liste</a>
+                                    <a class="btn btn-danger mr-3" href="{{ path('admin_user_edit', {'id': user.id}) }}"><i class="fas fa-pencil-alt"></i> Modifier</a>
+                                    {#                                    {{ include('admin/user/__delete_form.html.twig') }}#}
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+            </div>
+            <!-- end page content-->
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+{% endblock %}
+

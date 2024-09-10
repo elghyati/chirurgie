@@ -1,0 +1,59 @@
+{% block _admin_order_widget %}
+    
+                
+    <div class="col-sm">
+        {{ form_label(form.amount) }}
+        {{ form_widget(form.amount) }}
+        {{ form_errors(form.amount) }}
+    </div>
+    <div class="col-sm">
+        {{ form_label(form.status) }}
+        {{ form_widget(form.status) }}
+        {{ form_errors(form.status) }}
+    </div>
+    <div class="col-sm">
+        {{ form_label(form.customer) }}
+        {{ form_widget(form.customer) }}
+        {{ form_errors(form.customer) }}
+    </div>
+
+    <div class="col-sm">
+        {{ form_label(form.updatedBy) }}
+        {{ form_widget(form.updatedBy) }}
+        {{ form_errors(form.updatedBy) }}
+    </div>
+
+   
+
+    <div class="row py-3 px-4 my-2 border border-primary">
+        <div class="col">
+            <h6> {{ form_label(form.orderDetails) }} </h6>
+            
+                
+            <div class="row py-1 px-4 bg-light">
+         {#       <div class="col text-bold text-center">Quantité</div>
+                <div class="col text-bold text-center">Désignation</div>
+                <div class="col-2 text-bold text-center">Prix unitaire</div>
+                <div class="col text-bold text-center">Montant</div>
+                <div class="col text-bold text-center">Ordre</div>#}
+
+                
+                <div class="col-1 text-bold text-center">Quantité</div>
+                <div class="col text-bold text-center">Désignation</div>
+                <div class="col-1 text-bold text-center">Prix unitaire</div>
+                <div class="col-2 text-bold text-center">Montant</div>
+                <div class="col-1 text-bold text-center">Ordre</div>
+                
+                
+                <div class="col-2 text-bold text-center">Actions</div>
+            </div>
+            {{ form_widget(form.orderDetails) }}
+            {{ form_errors(form.orderDetails) }}
+            <input type="hidden" id="widgets-details-counter" value="0">
+            <div class="form-group">
+                <button type="button" id="add-detail" class="btn btn-primary"><i class="fa fa-plus"></i> Ajouter un article </button>  
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

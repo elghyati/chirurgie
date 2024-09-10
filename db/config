@@ -1,0 +1,9 @@
+    user_images: /uploads/images/users
+    article_images: /uploads/images/articles
+    famille_images: /uploads/images/familles
+    sous_famille_images: /uploads/images/sousfamilles
+    brand_images: /uploads/images/brands
+    arrival_images: /uploads/images/arrivages
+    promotion_images: /uploads/images/promotions
+    middle_images: /uploads/images/middle
+    header_images: /uploads/images/header

@@ -1,0 +1,624 @@
+{% extends 'base.html.twig' %}
+{% block title %}Chirurgie Med - Home{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/style-carossel.css') }}">
+{% endblock %}
+{% block body %}
+<div class="background d-none d-md-block" id="background1"></div>
+<div class="background d-none d-md-block" id="background2"></div>
+    <!-- Start Slider -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="img/banner1.png" style="width:100%">
+                {# <div class="text">Caption Text</div> #}
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="img/banner2.png" style="width:100%">
+                {# <div class="text">Caption Two</div> #}
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="img/img8_chmed.png" style="width:100%">
+                {# <div class="text">Caption Three</div> #}
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="img/img6_chmed.png" style="width:100%">
+                {# <div class="text">Caption for</div> #}
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 4</div>
+                <img src="img/img4_chmed.png" style="width:100%">
+                {# <div class="text">Caption for</div> #}
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 4</div>
+                <img src="img/img5_chmed.png" style="width:100%">
+                {# <div class="text">Caption for</div> #}
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 4</div>
+                <img src="img/img7_chmed.png" style="width:100%">
+                {# <div class="text">Caption for</div> #}
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 4</div>
+                <img src="img/img3_chmed.png" style="width:100%">
+                {# <div class="text">Caption for</div> #}
+            </div>
+        </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span>  
+        <span class="dot" onclick="currentSlide(5)"></span> 
+        <span class="dot" onclick="currentSlide(6)"></span> 
+        <span class="dot" onclick="currentSlide(7)"></span> 
+        <span class="dot" onclick="currentSlide(8)"></span>  
+    </div>
+<div class="slides-navigation">
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+{# <div class="background2" id="background3"></div>
+<div class="background2" id="background4"></div> #}
+    <div class="container mrg-rebr">
+        <div class="center policy-shop">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="icon">
+                            <img class="mark-lazy" src="img/fast-delivery.png" data-src="img/fast-delivery.png" alt="fast-delivery">
+                        </div>
+                        <div class="info">
+                            <h3>Livraison gratuite</h3>
+                            <p>Plus de détails</p>
+                        </div>
+                    </div>
+                </div>
+                {# <div class="col-lg-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="icon">
+                            <img class="mark-lazy" src="img/icon-2.png" data-src="img/icon-2.png" alt="">
+                        </div>
+                        <div class="info">
+                            <h3>Garantie d'argents</h3>
+                            <p>30 jours</p>
+                        </div>
+                    </div>
+                </div> #}
+                <div class="col-lg-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="icon">
+                            <img class="mark-lazy" src="img/headphones.png" data-src="img/headphones.png" alt="headphones">
+                        </div>
+                        <div class="info">
+                            <h3>Assistance 24/7</h3>
+                            <p>Plus de détails</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="icon">
+                            <img class="mark-lazy" src="img/payment.png" data-src="img/payment.png" alt="payment">
+                        </div>
+                        <div class="info">
+                            <h3>Paiement Sécurisé</h3>
+                            <p>Plus de détails</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div> 
+    </div> 
+        <!-- End Activities -->
+    <!-- End Slider --> 
+    <!-- Start Activities  -->
+    {# <div class="center policy-shop">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="item">
+                    <div class="icon">
+                        <img class="mark-lazy" src="img/icon-1.png" data-src="img/icon-1.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>Livraison gratuite</h3>
+                        <p>Livraison gratuite à votre domicile</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="item">
+                    <div class="icon">
+                        <img class="mark-lazy" src="img/icon-2.png" data-src="img/icon-2.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>Garantie d'argents</h3>
+                        <p>30 jours</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="item">
+                    <div class="icon">
+                        <img class="mark-lazy" src="img/icon-3.png" data-src="img/icon-3.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>Diagnostic / Appareillage</h3>
+                        <p>Système sécurisé</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="item">
+                    <div class="icon">
+                        <img class="mark-lazy" src="img/icon-4.png" data-src="img/icon-4.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>Support en ligne</h3>
+                        <p>24 heures par jour</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div> #}
+    <!-- End Activities -->
+
+    <!-- Start Categories  -->
+    {# <div class="categories-shop">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box"> <img class="img-fluid" src="img/img-d1.png"s alt="img-d1" /> <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a> </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box"> <img class="img-fluid" src="img/img-d2.jpg" alt="img-d2" /> <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a> </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box"> <img class="img-fluid" src="img/img-d3.jpg" alt="img-d3" /> <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a> </div>
+                </div>
+            </div>
+        </div>
+    </div> #}
+
+    {# <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="news-slider" class="owl-carousel">
+                <div class="post-slide">
+                    <div class="post-img">
+                        <a href="#" class="over-layer"><img src="img/img-med-chir0.jpeg" alt=""></a>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">Jan 5, 2016</span>
+                        <h3 class="post-title"><a href="#">Lorem ipsum dolor sit</a></h3>
+                        <p class="post-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum mauris. Praesent vehicula gravida dolor, ac efficitur sem sagittis.
+                        </p>
+                        <ul class="post-bar">
+                            <li><a href="#">Mockups</a>,</li>
+                            <li><a href="#">Graphics</a></li>
+                        </ul>
+                    </div>
+                </div>
+ 
+                <div class="post-slide">
+                    <div class="post-img">
+                        <a href="#" class="over-layer"><img src="img/img-med-chir1.jpeg" alt=""></a>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">Jan 7, 2016</span>
+                        <h3 class="post-title"><a href="#">Lorem ipsum dolor sit</a></h3>
+                        <p class="post-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum mauris. Praesent vehicula gravida dolor, ac efficitur sem sagittis.
+                        </p>
+                        <ul class="post-bar">
+                            <li><a href="#">Mockups</a>,</li>
+                            <li><a href="#">Graphics</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="post-slide">
+                    <div class="post-img">
+                        <a href="#" class="over-layer"><img src="img/img-med-chir2.jpeg" alt=""></a>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">Jan 7, 2016</span>
+                        <h3 class="post-title"><a href="#">Lorem ipsum dolor sit</a></h3>
+                        <p class="post-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum mauris. Praesent vehicula gravida dolor, ac efficitur sem sagittis.
+                        </p>
+                        <ul class="post-bar">
+                            <li><a href="#">Mockups</a>,</li>
+                            <li><a href="#">Graphics</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="post-slide">
+                    <div class="post-img">
+                        <a href="#" class="over-layer"><img src="img/img-med-chir3.jpeg" alt=""></a>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">Jan 7, 2016</span>
+                        <h3 class="post-title"><a href="#">Lorem ipsum dolor sit</a></h3>
+                        <p class="post-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum mauris. Praesent vehicula gravida dolor, ac efficitur sem sagittis.
+                        </p>
+                        <ul class="post-bar">
+                            <li><a href="#">Mockups</a>,</li>
+                            <li><a href="#">Graphics</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> #}
+    <!-- End Categories -->
+
+    <div class="box-add-products">
+        <div class="container">
+                <div class="title-all text-center">
+                    <h1>Qui sommes-nous ?</h1>
+                </div>
+            <div class="row">
+                {# <video autoplay muted loop id="myVideo">
+                    <source src="img/video-chir3.mp4" type="video/mp4">
+                </video> #}
+                <iframe width="1000" height="500" style="margin: auto;" src="https://www.youtube.com/embed/_8j5-ezQmRI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Products  -->
+    <div class="products-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <h1>Produits en gondales</h1>
+                        {# <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p> #}
+                    </div>
+                </div>
+            </div>
+            <br/>
+            {# <div class="row">
+                <div class="col-lg-12">
+                    <div class="special-menu text-center">
+                        <div class="button-group filter-button-group">
+                            <button class="active" data-filter="*">Tout</button>
+                            <button data-filter=".top-featured">Meilleur commenté</button>
+                            <button data-filter=".best-seller">Meilleur ventes</button>
+                        </div>
+                    </div>
+                </div>
+            </div> #}
+            
+  <div class="row">
+    <div class="col-md-4 col-sm-6">
+        <div class="product-grid-home">
+            <div class="product-image">
+                <a href="#" class="image">
+                    <img src="img/product_ch1.jpg">
+                </a>
+                <span class="product-sale-label">-15%</span>
+                <ul class="product-links">
+                    <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
+                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                    <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                </ul>
+            </div>
+            <div class="product-content">
+                <h3 class="title"><a href="#">Nom du Produit</a></h3>
+                <ul class="rating">
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="far fa-star"></li>
+                </ul>
+                <span class="product-category"><a href="#">300 dhs au lieu de <strike style='color:black'>350 dhs</strike></a></span>
+                {# <div class="price">$55.55</div> #}
+                <a href="#" class="add-to-cart"><i class="fas fa-cart-plus"></i> Ajouter aux panier</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <div class="product-grid-home">
+            <div class="product-image">
+                <a href="#" class="image">
+                    <img src="img/product_ch2.jpg">
+                </a>
+                <span class="product-sale-label">-15%</span>
+                <ul class="product-links">
+                    <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
+                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                    <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                </ul>
+            </div>
+            <div class="product-content">
+                <h3 class="title"><a href="#">Nom du Produit</a></h3>
+                <ul class="rating">
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="far fa-star"></li>
+                </ul>
+                <span class="product-category"><a href="#">300 dhs au lieu de <strike style='color:black'>350 dhs</strike></a></span>
+                {# <div class="price">$79.99</div> #}
+                <a href="#" class="add-to-cart"><i class="fas fa-cart-plus"></i> Ajouter aux panier</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <div class="product-grid-home">
+            <div class="product-image">
+                <a href="#" class="image">
+                    <img src="img/product_ch3.png">
+                </a>
+                <span class="product-sale-label">-15%</span>
+                <ul class="product-links">
+                    <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
+                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                    <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                </ul>
+            </div>
+            <div class="product-content">
+                <h3 class="title"><a href="#">Nom du Produit</a></h3>
+                <ul class="rating">
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="far fa-star"></li>
+                </ul>
+                <span class="product-category"><a href="#">300 dhs au lieu de <strike style='color:black'>350 dhs</strike></a></span>
+                {# <div class="price">$55.55</div> #}
+                <a href="#" class="add-to-cart"><i class="fas fa-cart-plus"></i> Ajouter aux panier</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+            {# <div class="my-5 text-center container">
+            <div class="row d-flex align-items-center">
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                    <a href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <div class="carousel-nav-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#7FAE4E">
+                            <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z"/>
+                        </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-10">
+                    <!--Start carousel-->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div style="background-image:url('{{ asset('img/product_ch1.jpg')}}');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                                <div style="background-image:url('{{ asset('img/product_ch2.png')}}');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                                <div style="background-image:url('{{ asset('img/product_ch3.jpg')}}');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                    <h3 class="text-white">Text in the panel.</h3> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div style="background-image:url('{{ asset('img/product_ch4.jpg')}}');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                                <div style="background-image:url('{{ asset('img/product_ch5.jpg')}}');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                                <div style="background-image:url('{{ asset('img/product_ch6.jpg')}}');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div style="background-image:url('{{ asset('img/product_ch7.jpg')}}');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                                <div style="background-image:url('{{ asset('img/product_ch8.jpg')}}');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                                <div style="background-image:url('{{ asset('img/product_ch9.jpg')}}');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div style="background-image:url('{{ asset('img/product_ch10.jpg')}}');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                                <div style="background-image:url('{{ asset('img/product_ch4.jpg')}}');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                                <div style="background-image:url('{{ asset('img/product_ch5.jpg')}}');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!--End carousel-->
+                </div>
+                <div class="col-1 d-flex align-items-center justify-content-center"><a  href="#carouselExampleIndicators" data-slide="next">
+                    <div class="carousel-nav-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#7FAE4E">
+                        <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"/>
+                        </svg>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            </div> #}
+        </div>
+    </div>
+
+    <!-- End Products  --> 
+
+    {# Start Clients Partners #}
+    <br/>
+    <div class="title-all text-center">
+        <h1 style="max-width: 280px;">Nos Partenaires</h1>
+    </div>
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide">
+                <img src="img/1.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide">
+                <img src="img/2.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide">
+                <img src="img/3.jpg" height="100" width="250" alt="" />
+            </div>
+            <div class="slide">
+                <img src="img/4.jpg" height="100" width="250" alt="" />
+            </div>
+            <div class="slide">
+                <img src="img/5.png" height="100" width="250" alt="" />
+            </div>
+{#            <div class="slide">
+                <img src="img/6.png" height="100" width="250" alt="" />
+            </div>#}
+            <div class="slide">
+                <img src="img/7.jpeg" height="100" width="250" alt="" />
+            </div>
+            <div class="slide">
+                <img src="img/8.jpeg" height="100" width="250" alt="" />
+            </div>
+{#            <div class="slide">
+                <img src="img/9.jpeg" height="100" width="250" alt="" />
+            </div>#}
+            <div class="slide">
+                <img src="img/10.jpeg" height="100" width="250" alt="" />
+            </div>
+            <div class="slide">
+                <img src="img/1.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide">
+                <img src="img/2.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide">
+                <img src="img/3.jpg" height="100" width="250" alt="" />
+            </div>
+            <div class="slide">
+                <img src="img/4.jpg" height="100" width="250" alt="" />
+            </div>
+            <div class="slide">
+                <img src="img/5.png" height="100" width="250" alt="" />
+            </div>
+ {#           <div class="slide">
+                <img src="img/6.png" height="100" width="250" alt="" />
+            </div>#}
+            <div class="slide">
+                <img src="img/7.jpeg" height="100" width="250" alt="" />
+            </div>
+            <div class="slide">
+                <img src="img/8.jpeg" height="100" width="250" alt="" />
+            </div>
+{#            <div class="slide">
+                <img src="img/9.jpeg" height="100" width="250" alt="" />
+            </div>#}
+            <div class="slide">
+                <img src="img/10.jpeg" height="100" width="250" alt="" />
+            </div>
+        </div>
+    </div>
+    <br>
+    {# end Clients Partners #}
+    <br/>
+    <div class="title-all text-center">
+        <h1 style="max-width: 280px;">Nos Certificats</h1>
+    </div>
+    <p class="center mb-2">
+        <img src="img/9.jpeg" height="100" width="250" alt="certificat" />
+    </p>
+<script src="{{ asset('js/jquery-3.2.1.min.js')}}"></script>
+{% block javascripts %}
+<script>
+var slideIndex = 1;
+
+var myTimer;
+
+var slideshowContainer;
+
+window.addEventListener("load",function() {
+    showSlides(slideIndex);
+    myTimer = setInterval(function(){plusSlides(1)}, 4000);
+  
+    //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+    if(slideshowContainer){
+    //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+  
+    slideshowContainer.addEventListener('mouseenter', pause)
+    slideshowContainer.addEventListener('mouseleave', resume)
+    }
+})
+
+// NEXT AND PREVIOUS CONTROL
+function plusSlides(n){
+  clearInterval(myTimer);
+  if (n < 0){
+    showSlides(slideIndex -= 1);
+  } else {
+   showSlides(slideIndex += 1); 
+  }
+  
+  //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+  
+  if (n === -1){
+    myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+  } else {
+    myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+  }
+}
+
+//Controls the current slide and resets interval if needed
+function currentSlide(n){
+  clearInterval(myTimer);
+  myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+pause = () => {
+  clearInterval(myTimer);
+}
+
+resume = () =>{
+  clearInterval(myTimer);
+  myTimer = setInterval(function(){plusSlides(slideIndex)}, 5000);
+}
+</script>
+{% endblock %}
+{% endblock %}

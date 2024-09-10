@@ -1,0 +1,10 @@
+
+/** ADD YOUR AWESOME CODES HERE **/
+#add_to_cart, #remove_article{
+    cursor: pointer;
+}
+#remove_article:hover{
+    color: red;
+    color: #ff6666
+    
+}

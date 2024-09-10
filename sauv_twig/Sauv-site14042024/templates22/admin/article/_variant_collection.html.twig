@@ -1,0 +1,136 @@
+{% block _admin_article_variants_entry_row %}
+    <div class="form-group" id="block_{{id}}">
+        {{ form_widget (form) }}
+    </div>
+{% endblock %}
+{% block _admin_article_variants_entry_widget %}
+    <div class="py-3 px-4 my-2 border border-primary">
+        <div class="row py-1">
+            {# <div class="col-1">
+                 <span class="btn btn-dark float-right" aria-disabled="true"> {{ value ? value.id : '*' }} </span>
+             </div>#}
+            <div class="col-2">
+                {#            {{ form_label(form.reference) }}#}
+                {{ form_widget(form.reference) }}
+                {{ form_errors(form.reference) }}
+            </div>
+            <div class="col">
+                {#            {{ form_label(form.size) }}#}
+                {{ form_widget(form.size) }}
+                {{ form_errors(form.size) }}
+            </div>
+            <div class="col">
+                {#            {{ form_label(form.color) }}#}
+                {{ form_widget(form.color) }}
+                {{ form_errors(form.color) }}
+            </div>
+            <div class="col">
+                {#            {{ form_label(form.price) }}#}
+                {{ form_widget(form.price) }}
+                {{ form_errors(form.price) }}
+            </div>
+            <div class="col">
+                {#            {{ form_label(form.priceProfessional) }}#}
+                {{ form_widget(form.priceProfessional) }}
+                {{ form_errors(form.priceProfessional) }}
+            </div>
+            <div class="col">
+                {#            {{ form_label(form.price) }}#}
+                {{ form_widget(form.priceDealer) }}
+                {{ form_errors(form.priceDealer) }}
+            </div>
+            {#        <div class="col">
+                        {{ form_label(form.discounted) }}
+                        {{ form_widget(form.discounted) }}
+                        {{ form_errors(form.discounted) }}
+                    </div>#}
+            <div class="col">
+                {#            {{ form_label(form.brand) }}#}
+                {{ form_widget(form.brand) }}
+                {{ form_errors(form.brand) }}
+            </div>
+            <div class="col">
+                {#            {{ form_label(form.discount) }}#}
+                {{ form_widget(form.discount) }}
+                {{ form_errors(form.discount) }}
+            </div>
+            <div class="col">
+                {#            {{ form_label(form.discount) }}#}
+                {{ form_widget(form.stock) }}
+                {{ form_errors(form.stock) }}
+            </div>
+
+
+            <div class="col-1">
+                <button type="button" data-action="delete" data-target="#block_{{id}}"  class="btn btn-danger"><i class="fas fa-trash"></i></button>        
+                <button type="button" data-action="position" data-target="#block_{{id}}"  class="btn btn-danger"><i class="fas fa-anchor"></i></button>        
+            </div>
+        </div>
+        <div class="row py-3 px-4 my-2 border border-primary">
+            <div class="col">
+                <h6> {{ form_label(form.images) }} </h6>
+                <div class="row py-1 bg-light">
+                    <div class="col-1 text-bold text-center"> </div>
+                    <div class="col-2 text-bold text-center">Fichier</div>
+                    <div class="col text-bold text-center">Libellé</div>
+
+                    <div class="col-1"></div>
+                </div>
+                <div class="border p-3 border-danger">
+                    {{ form_widget(form.images) }}
+                    {{ form_errors(form.images) }}
+                </div>
+                <div class="form-group">
+                    {# <button type="button" id="add-image_variant" class="btn btn-primary image_variant_adder"><i class="fa fa-plus"></i> Ajouter une image</button>  #}
+                    <button type="button" class="btn btn-primary image_variant_adder mt-2"><i class="fa fa-plus"></i> Ajouter une image</button>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {#  <div class="row py-1 border-bottom border-secondary">
+  <span>images</span>
+</div>#}
+
+{% endblock %}
+
+{% block _admin_article_variants_entry_images_widget %}
+
+    {#{% block _admin_article_variant_widget %}#}
+    {#    <p>bonjour</p>#}
+    {{ form_widget (form) }}
+    {#    <input type="hidden" id="widgets-imsages_variant-counter" value="0">#}
+    {#<div class="form-group">
+        <button type="button" id="add-image" class="btn btn-primary"><i class="fa fa-plus"></i> Ajouter une image fddgfdgdv</button>        
+    </div>#}
+{% endblock %}
+
+{% block _admin_article_variants_entry_images_entry_row %}
+    <div class="form-group" id="block_{{id}}">
+        {{ form_widget (form) }}
+    </div>
+{% endblock %}
+{% block _admin_article_variants_entry_images_entry_widget %}
+    <div class="row mb-3">
+        <div class="col-1">
+            {% if value %}
+                <img src="{{ asset('uploads/images/articles/' ~ value.url) }}" class="img-fluid">
+            {% endif %}
+        </div>
+        <div class="col-5">
+            {#
+            #}
+            {#{{ form_widget(form.url) }}#}
+            {{ form_widget(form.imageFile) }}
+            {{ form_errors(form.imageFile) }}
+        </div>
+        <div class="col-5">
+            {{ form_widget(form.caption) }}
+            {{ form_errors(form.caption) }}
+        </div>
+        <div class="col">
+            <button type="button" data-action="delete" data-target="#block_{{id}}"  class="btn btn-danger"><i class="fas fa-trash"></i></button>        
+        </div>
+    </div>
+{% endblock %}

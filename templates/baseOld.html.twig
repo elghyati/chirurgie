@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>{% block title %}Chirurgie Med{% endblock %}</title>
+    <!-- TemplateEndEditable -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{{ asset('admin/images/favicon.ico') }}">
+    {# <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png')}}"> #}
+
+    <!-- Site Icons -->
+    {#        <link rel="shortcut icon" href="admin/images/favicon.ico" type="image/x-icon"> #}
+    {#        <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> #}
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+    <!-- FontAwsome CSS -->
+    <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+    {#        <link rel="stylesheet" href="{{ asset('css/all.min.css') }}"/> #}
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
+
+    {% block stylesheets %}{% endblock %}
+</head>
+
+<body>
+<!-- Start Main Top -->
+<div class="main-top">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="right-phone-box">
+                    <p><i class="fa fa-phone"></i> <a href="#"> +212 661 800 100</a></p>
+                </div>
+                <div class="our-link">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-location-arrow"></i> Localisation</a></li>
+                        <li><a href="{{ path('contact') }}"><i class="fas fa-headset"></i> Contactez-nous</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="our-link" style="float: right;">
+                    <ul>
+                        {% if app.user %}
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="accountDropLink">
+                                    <i class="fas fa-user"></i>
+                                    {{ app.user.fullName }}
+                                </a>
+                                <div class="dropdown-menu main-top" aria-labelledby="accountDropLink">
+                                    <a href="{{ path('user_index') }}" class="dropdown-item">Mon compte</a>
+                                    <a href="{{ path('user_profile') }}" class="dropdown-item">Modifier mon profil</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="{{ path('customer_logout') }}" class="dropdown-item">Déconnexion</a>
+
+                                </div>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                   id="accountDropLink">
+                                    <i class="fas fa-user"></i>
+                                    Mon Compte
+                                </a>
+                                <div class="dropdown-menu main-top" aria-labelledby="accountDropLink">
+                                    <a href="{{ path('customer_login') }}" class="dropdown-item">Connexion</a>
+                                    <a href="{{ path('customer_register') }}" class="dropdown-item">Inscription</a>
+
+                                </div>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+                <div class="text-slid-box">
+                    <div id="offer-box" class="carouselTicker">
+                        <ul class="offer-box">
+                            <li><i class="fab fa-opencart"></i> -20% pour tout achat code Promo : offT80</li>
+                            <li><i class="fab fa-opencart"></i> -50% à - 80% pour thermomètres</li>
+                            <li><i class="fab fa-opencart"></i> -10%! Achat meubles</li>
+                            <li><i class="fab fa-opencart"></i> -50%! Pour tout acaht immédiat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- End Main Top -->
+<div class="site-mobile-menu">
+    <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+</div>
+<!-- Start Main Top -->
+<header class="main-header" role="banner">
+    <!-- Start Navigation -->
+    <div class="container">
+        <!-- Start Header Navigation -->
+        <div class="row head-bg d-none d-xl-block" id="navbar">
+            <div style="margin-left: 5%;">
+                <a class="navbar-brand" href="{{ path('home_index') }}"><img src="{{ asset('img/logo.png') }}"
+                                                                             style="width: 65%;" class="logo"
+                                                                             alt="logo"><!--Chirurgie Med--></a>
+            </div>
+            <div class="navbar-header">
+                <nav style="margin-top: -5%;margin-left: 15%;" class="site-navigation position-relative center">
+                    <ul class="nav site-menu js-clone-nav mr-auto d-none d-md-block d-lg-block">
+                        <li><a href="{{ path('home_index') }}" aria-selected="true"><span
+                                        class="menu-act"><b>Accueil</b></span></a></li>
+                        <li><a href="{{ path('article_shop') }}" aria-selected="false">
+                                <span class="menu-act"><b>Produits</b></span></a>
+                        </li>
+                        <li><a href="{{ path('aboutus') }}" aria-selected="false">
+                                <span class="menu-act"><b>À Propos</b></span></a>
+                        </li>
+                        <li><a href="{{ path('contact') }}" aria-selected="false"><span class="menu-act"><b>Contact</b></span></a>
+                        </li>
+                        <li style="margin-top: 1%;">
+                            <span class="search-bar">
+                                <input class="form-control" placeholder="search for products"
+                                       id="mySearch" type="text" disabled>
+                                <button type="submit"><label for="mySearch"> <i
+                                                class="fa fa-search"></i></label></button>
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- End Navigation -->
+        <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;left: 10px;">
+            <a href="#" class="site-menu-toggle js-menu-toggle active"><span class="icon-menu h3"></span></a>
+        </div>
+        <!-- End Atribute Navigation -->
+    </div>
+    <!-- Header desktop -->
+
+
+</header>
+<!-- End Main Top -->
+
+<!-- Start flashes -->
+{% for label, messages in app.flashes %}
+    <div class="alert alert-{{ label }}">
+        {% for  message in messages %}
+            <p>{{ message |raw }}</p>
+        {% endfor %}
+    </div>
+{% endfor %}
+<!-- End flashes -->
+{# <div class="my-5"></div> #}
+{% block body %}{% endblock %}
+
+<!-- Start Footer  -->
+<footer>
+    <div class="footer-main">
+        <div class="container footer-link">
+            <div class="center row">
+                <div class="col-lg-2 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3><a href="{{ path('contact') }}">Mon Compte</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3><a href="{{ path('contact') }}">Créer un compte</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3><a href="{{ path('contact') }}">Nous Contacter</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 col-sm-12">
+                    <div class="footer-link-contact">
+                        <h3><a href="{{ path('article_shop') }}">Nos Produits</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 col-sm-12">
+                    <div class="footer-link-contact">
+                        <h3><a href="{{ path('aboutus') }}">A Propos</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="adress-foot row">
+                <p><i class="fas fa-phone-square"></i> Fix : <a href="tel:+212-661800300"> +212 5 37 62 72 12 / +212 5
+                        37 64 65 47</a> <i class="fas fa-map-marker-alt"></i> LOT BELFQUIH, 91 AV.TARIK IBN ZIAD –
+                    TEMARA - MAROC</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 center">
+                    <div class="footer-top-box">
+                        <form class="newsletter-box">
+                            <div class="form-group w-50">
+                                <input class="" type="email" name="Email" placeholder="Email Address*">
+                                <i class="fa fa-envelope"></i></div>
+                            <button class="btn-foot btn hvr-hover" type="submit">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 center">
+                    <ul class="menu-pay" style="margin-top: 30px;display: flex;">
+                        <li><a href="#"><img src="{{ asset('img/paypal.png') }}" alt="paypal"/></a></li>
+                        <li><a href="#"><img src="{{ asset('img/mastercard.png') }}" alt="mastercard"/></a></li>
+                        <li><a href="#"><img src="{{ asset('img/visa.png') }}" alt="visa"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer  -->
+<!-- Start copyright  -->
+<div class="footer-copyright">
+    <p class="footer-company">Tous droits Réservés. &copy; 2024
+        <!--<a href="#">ThewayShop</a> Design By : <a href="https://html.design/">html design</a>--></p>
+</div>
+<!-- End copyright  -->
+
+{# <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a> #}
+<a href="#" id="back-to-top" title="Haut de page" style="display: none;"><i class="fa fa-arrow-up"></i></a>
+
+
+<!-- ALL JS FILES -->
+<script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ asset('js/popper.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<!-- ALL PLUGINS -->
+<script src="{{ asset('js/jquery.superslides.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap-select.js') }}"></script>
+<script src="{{ asset('js/inewsticker.js') }}"></script>
+<script src="{{ asset('js/bootsnav.js') }}"></script>
+<script src="{{ asset('js/images-loded.min.js') }}"></script>
+<script src="{{ asset('js/isotope.min.js') }}"></script>
+<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('js/baguetteBox.min.js') }}"></script>
+<script src="{{ asset('js/form-validator.min.js') }}"></script>
+<script src="{{ asset('js/contact-form-script.js') }}"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
+<script src="{{ asset('js/axios.min.js') }}"></script>
+{# <script src="{{ asset('js/activeNav.js')}}"></script> #}
+<script src="{{ asset('js/jquery.sticky.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
+<script>
+    function CartPreview(dataCart) {
+        var htmlCart = "";
+        if (dataCart != null && dataCart.items != null) {
+            {#                    var items = []; #}
+            console.log(dataCart.total);
+            var details = JSON.parse(dataCart.items.content);
+            console.log(details);
+            $.each(details, function (key, item) {
+                htmlCart += '<li> <a href="{{ path('article_detail', {id: 'item_id'}) }}" class = "photo" > ' +
+                    '<img src="{{ asset("uploads/images/articles/" ~ 'item_image') }}" class="cart-thumb" alt="" /> </a> ' +
+                    '<h6>{# <a href="{{ path('article_detail', {id: 'item_id'}) }}">' + #}' + item.designation + '{# '</a> #}</h6>'
+                        {# {%if app.user%} #}
+                    + '<span class="float-right">' + item.quantity + ' x <span class = "price" >' + parseFloat(item.puht).toLocaleString('fr-FR', {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2,
+                        useGrouping: true
+                    }) + ' DH </span></span>'
+                        {# {%endif%} #}
+                    + '</li>'
+                htmlCart = htmlCart.replace('item_id', item.id);
+                htmlCart = htmlCart.replace('item_image', item.image);
+            });
+            htmlCart += '<li class="total" style="margin-bottom: 70px;" > ' +
+                '<a href="{{ path('cart_index') }}" class="btn btn-default hvr-hover btn-cart">Panier</a>' +
+                '<span class="float-right">'
+                    {# {%if app.user%} #}
+                + '   Total HT: <strong>' + parseFloat(dataCart.total).toLocaleString('fr-FR', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                    useGrouping: true
+                }) + '<strong>'
+                    {# {%endif%} #}
+                + ' </span>'
+                + '</li>'
+            $("#cartMiniList").html(htmlCart);
+            if (details.length != null) {
+                $("#items_count").html(details.length);
+            } else {
+                $("#items_count").html("0");
+            }
+        }
+        return htmlCart;
+    }
+
+    $(document).ready(function () {
+        var $url = "{{ path('cart_get') }}";
+        $.ajax({
+            type: "POST",
+            url: $url,
+            cache: true,
+            success: function (data) {
+                $('#cartMiniList').html(CartPreview(data));
+                {# event.preventDefault(); #}
+            }
+        });
+
+
+    });
+</script>
+{# @AI Start #}
+<script>
+    jQuery(function ($) {
+
+        var path = window.location.href;
+
+        $('ul a').each(function () {
+
+            if (this.href === path) {
+
+                $(this).parent().addClass('active');
+                //$('.nav li.active').removeClass('active');
+
+            }
+
+        });
+    });
+</script>
+{# @AI end #}
+{% block javascripts %}{% endblock %}
+
+</body>
+</html>

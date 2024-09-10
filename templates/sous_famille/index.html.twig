@@ -1,0 +1,38 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Liste des sous-familles!{% endblock %}
+
+{% block body %}
+    <div>
+        <h1 class="">Liste des sous-familles</h1>
+    </div>
+    <hr />
+    <p class="badge-danger">En cours de conception</p>
+    <br />
+    <div class="table-responsive">
+        {#        <table class="table  table-striped  table-hover">#}
+        <table class="table  table-hover">
+            <thead class="table-dark">
+            <th>Sous-famille</th>
+            <th>Famille</th>
+            <th></th>
+            </thead>
+            <tbody>
+
+                {% for sous_famille in sous_familles %}
+                    <tr border-bottom>
+                        <td> {{ sous_famille.sousFamille }}</td>
+                        <td> {{ sous_famille.famille }}</td>
+                        <td>
+                            {# <a class="btn btn-success" href="{{ path('client_show', {id: client.id}) }}">show</a>#}
+                            <a class="btn btn-primary" href="{{ path('sous_famille_edit', {id: sous_famille.id}) }}">edit</a>
+                            <a class="btn btn-danger" href="{{ path('sous_famille_delete', {id: sous_famille.id}) }}">delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="btn btn-success" href="{{ path('sous_famille_create') }}" style="margin-top: 15px;">Ajout famille</a>
+
+    </div>
+{% endblock %}

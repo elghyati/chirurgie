@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="App\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/cocur/slugify/src" isTestSource="false" packagePrefix="Cocur\Slugify\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/cocur/slugify/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/cocur/slugify/tests" isTestSource="true" packagePrefix="Cocur\Slugify\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/composer/package-versions-deprecated/src/PackageVersions" isTestSource="false" packagePrefix="PackageVersions\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/composer/package-versions-deprecated/test/PackageVersionsTest" isTestSource="true" packagePrefix="PackageVersionsTest\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/composer/package-versions-deprecated/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/annotations/lib/Doctrine/Common/Annotations" isTestSource="false" packagePrefix="Doctrine\Common\Annotations\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/annotations/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/annotations/tests/Doctrine/Performance/Common/Annotations" isTestSource="true" packagePrefix="Doctrine\Performance\Common\Annotations\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/annotations/tests/Doctrine/Tests/Common/Annotations" isTestSource="true" packagePrefix="Doctrine\Tests\Common\Annotations\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/cache/lib/Doctrine/Common/Cache" isTestSource="false" packagePrefix="Doctrine\Common\Cache\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/cache/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/cache/tests/Doctrine/Tests" isTestSource="true" packagePrefix="Doctrine\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/collections/lib/Doctrine/Common/Collections" isTestSource="false" packagePrefix="Doctrine\Common\Collections\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/collections/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/collections/tests/Doctrine/Tests" isTestSource="true" packagePrefix="Doctrine\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/common/lib/Doctrine/Common" isTestSource="false" packagePrefix="Doctrine\Common\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/common/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/common/tests/Doctrine/Tests" isTestSource="true" packagePrefix="Doctrine\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures" isTestSource="false" packagePrefix="Doctrine\Common\DataFixtures\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/data-fixtures/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/data-fixtures/tests/Doctrine/Tests" isTestSource="true" packagePrefix="Doctrine\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/dbal/lib/Doctrine/DBAL" isTestSource="false" packagePrefix="Doctrine\DBAL\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/dbal/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/dbal/tests/Doctrine/Tests" isTestSource="true" packagePrefix="Doctrine\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/doctrine-bundle/" isTestSource="false" packagePrefix="Doctrine\Bundle\DoctrineBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/doctrine-bundle/Tests/DependencyInjection" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/doctrine-bundle/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/doctrine-fixtures-bundle/" isTestSource="false" packagePrefix="Doctrine\Bundle\FixturesBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/doctrine-fixtures-bundle/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/doctrine-migrations-bundle/" isTestSource="false" packagePrefix="Doctrine\Bundle\MigrationsBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/doctrine-migrations-bundle/Tests" isTestSource="true" packagePrefix="Doctrine\Bundle\MigrationsBundle\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/doctrine-migrations-bundle/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/event-manager/lib/Doctrine/Common" isTestSource="false" packagePrefix="Doctrine\Common\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/event-manager/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/event-manager/tests/Doctrine/Tests" isTestSource="true" packagePrefix="Doctrine\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/inflector/lib/Doctrine/Common/Inflector" isTestSource="false" packagePrefix="Doctrine\Common\Inflector\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/inflector/lib/Doctrine/Inflector" isTestSource="false" packagePrefix="Doctrine\Inflector\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/inflector/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/inflector/tests/Doctrine/Tests/Common/Inflector" isTestSource="true" packagePrefix="Doctrine\Tests\Common\Inflector\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/inflector/tests/Doctrine/Tests/Inflector" isTestSource="true" packagePrefix="Doctrine\Tests\Inflector\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/instantiator/src/Doctrine/Instantiator" isTestSource="false" packagePrefix="Doctrine\Instantiator\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/instantiator/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/lexer/lib/Doctrine/Common/Lexer" isTestSource="false" packagePrefix="Doctrine\Common\Lexer\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/lexer/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/lexer/tests/Doctrine" isTestSource="true" packagePrefix="Doctrine\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/migrations/lib/Doctrine/Migrations" isTestSource="false" packagePrefix="Doctrine\Migrations\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/migrations/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/migrations/tests/Doctrine/Migrations/Tests" isTestSource="true" packagePrefix="Doctrine\Migrations\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/orm/lib/Doctrine/ORM" isTestSource="false" packagePrefix="Doctrine\ORM\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/orm/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/orm/tests/Doctrine/Performance" isTestSource="true" packagePrefix="Doctrine\Performance\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/orm/tests/Doctrine/Tests" isTestSource="true" packagePrefix="Doctrine\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/persistence/lib/Doctrine/Common" isTestSource="false" packagePrefix="Doctrine\Common\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/persistence/lib/Doctrine/Persistence" isTestSource="false" packagePrefix="Doctrine\Persistence\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/persistence/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/persistence/tests/Doctrine/Tests" isTestSource="true" packagePrefix="Doctrine\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/persistence/tests/Doctrine/Tests_PHP74" isTestSource="true" packagePrefix="Doctrine\Tests_PHP74\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/reflection/lib/Doctrine/Common" isTestSource="false" packagePrefix="Doctrine\Common\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/reflection/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/reflection/tests/Doctrine/Tests" isTestSource="true" packagePrefix="Doctrine\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/reflection/tests/Doctrine/Tests_PHP74" isTestSource="true" packagePrefix="Doctrine\Tests_PHP74\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/sql-formatter/src" isTestSource="false" packagePrefix="Doctrine\SqlFormatter\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/doctrine/sql-formatter/tests" isTestSource="true" packagePrefix="Doctrine\SqlFormatter\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/egulias/email-validator/src" isTestSource="false" packagePrefix="Egulias\EmailValidator\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/egulias/email-validator/tests" isTestSource="true" packagePrefix="Egulias\EmailValidator\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/egulias/email-validator/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/fzaninotto/faker/src/Faker" isTestSource="false" packagePrefix="Faker\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/fzaninotto/faker/test/Faker" isTestSource="true" packagePrefix="Faker\Test\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/fzaninotto/faker/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/jms/metadata/src" isTestSource="false" packagePrefix="Metadata\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/jms/metadata/tests" isTestSource="true" packagePrefix="Metadata\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/jms/metadata/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/laminas/laminas-code/src" isTestSource="false" packagePrefix="Laminas\Code\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/laminas/laminas-code/test" isTestSource="true" packagePrefix="LaminasTest\Code\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/laminas/laminas-code/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/laminas/laminas-eventmanager/benchmarks" isTestSource="true" packagePrefix="LaminasBench\EventManager\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/laminas/laminas-eventmanager/src" isTestSource="false" packagePrefix="Laminas\EventManager\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/laminas/laminas-eventmanager/test" isTestSource="true" packagePrefix="LaminasTest\EventManager\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/laminas/laminas-eventmanager/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/laminas/laminas-zendframework-bridge/src/" isTestSource="false" packagePrefix="Laminas\ZendFrameworkBridge\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/laminas/laminas-zendframework-bridge/test" isTestSource="true" packagePrefix="LaminasTest\ZendFrameworkBridge\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/laminas/laminas-zendframework-bridge/test/TestAsset/Laminas" isTestSource="true" packagePrefix="Laminas\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/laminas/laminas-zendframework-bridge/test/TestAsset/LaminasApiTools" isTestSource="true" packagePrefix="Laminas\ApiTools\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/laminas/laminas-zendframework-bridge/test/TestAsset/Mezzio" isTestSource="true" packagePrefix="Mezzio\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/laminas/laminas-zendframework-bridge/test/TestAsset/classes" isTestSource="true" packagePrefix="LaminasTest\ZendFrameworkBridge\TestAsset\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/laminas/laminas-zendframework-bridge/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/monolog/monolog/src/Monolog" isTestSource="false" packagePrefix="Monolog\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/monolog/monolog/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/monolog/monolog/tests/Monolog" isTestSource="true" packagePrefix="Monolog\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/nikic/php-parser/lib/PhpParser" isTestSource="false" packagePrefix="PhpParser\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/nikic/php-parser/test/PhpParser" isTestSource="true" packagePrefix="PhpParser\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/nikic/php-parser/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/ocramius/proxy-manager/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/ocramius/proxy-manager/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/phpdocumentor/reflection-common/src" isTestSource="false" packagePrefix="phpDocumentor\Reflection\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/phpdocumentor/reflection-docblock/src" isTestSource="false" packagePrefix="phpDocumentor\Reflection\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/phpdocumentor/reflection-docblock/tests/unit" isTestSource="true" packagePrefix="phpDocumentor\Reflection\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/phpdocumentor/type-resolver/src" isTestSource="false" packagePrefix="phpDocumentor\Reflection\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/phpdocumentor/type-resolver/tests/benchmark" isTestSource="true" packagePrefix="phpDocumentor\Reflection\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/phpdocumentor/type-resolver/tests/unit" isTestSource="true" packagePrefix="phpDocumentor\Reflection\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/psr/cache/src" isTestSource="false" packagePrefix="Psr\Cache\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/psr/container/src" isTestSource="false" packagePrefix="Psr\Container\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/psr/event-dispatcher/src" isTestSource="false" packagePrefix="Psr\EventDispatcher\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/psr/link/src" isTestSource="false" packagePrefix="Psr\Link\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/psr/log/Psr/Log" isTestSource="false" packagePrefix="Psr\Log\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/sensio/framework-extra-bundle/src" isTestSource="false" packagePrefix="Sensio\Bundle\FrameworkExtraBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/sensio/framework-extra-bundle/tests" isTestSource="true" packagePrefix="Sensio\Bundle\FrameworkExtraBundle\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/sensio/framework-extra-bundle/tests/Fixtures" isTestSource="true" packagePrefix="Tests\Fixtures\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/asset/" isTestSource="false" packagePrefix="Symfony\Component\Asset\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/browser-kit/" isTestSource="false" packagePrefix="Symfony\Component\BrowserKit\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/cache-contracts/" isTestSource="false" packagePrefix="Symfony\Contracts\Cache\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/cache/" isTestSource="false" packagePrefix="Symfony\Component\Cache\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/config/" isTestSource="false" packagePrefix="Symfony\Component\Config\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/console/" isTestSource="false" packagePrefix="Symfony\Component\Console\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/css-selector/" isTestSource="false" packagePrefix="Symfony\Component\CssSelector\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/debug-bundle/" isTestSource="false" packagePrefix="Symfony\Bundle\DebugBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/dependency-injection/" isTestSource="false" packagePrefix="Symfony\Component\DependencyInjection\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/doctrine-bridge/" isTestSource="false" packagePrefix="Symfony\Bridge\Doctrine\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/dom-crawler/" isTestSource="false" packagePrefix="Symfony\Component\DomCrawler\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/dotenv/" isTestSource="false" packagePrefix="Symfony\Component\Dotenv\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/error-handler/" isTestSource="false" packagePrefix="Symfony\Component\ErrorHandler\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/event-dispatcher-contracts/" isTestSource="false" packagePrefix="Symfony\Contracts\EventDispatcher\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/event-dispatcher/" isTestSource="false" packagePrefix="Symfony\Component\EventDispatcher\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/expression-language/" isTestSource="false" packagePrefix="Symfony\Component\ExpressionLanguage\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/filesystem/" isTestSource="false" packagePrefix="Symfony\Component\Filesystem\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/finder/" isTestSource="false" packagePrefix="Symfony\Component\Finder\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/flex/src" isTestSource="false" packagePrefix="Symfony\Flex\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/form/" isTestSource="false" packagePrefix="Symfony\Component\Form\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/framework-bundle/" isTestSource="false" packagePrefix="Symfony\Bundle\FrameworkBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/http-client-contracts/" isTestSource="false" packagePrefix="Symfony\Contracts\HttpClient\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/http-client/" isTestSource="false" packagePrefix="Symfony\Component\HttpClient\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/http-foundation/" isTestSource="false" packagePrefix="Symfony\Component\HttpFoundation\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/http-kernel/" isTestSource="false" packagePrefix="Symfony\Component\HttpKernel\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/inflector/" isTestSource="false" packagePrefix="Symfony\Component\Inflector\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/intl/" isTestSource="false" packagePrefix="Symfony\Component\Intl\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/mailer/" isTestSource="false" packagePrefix="Symfony\Component\Mailer\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/maker-bundle/src" isTestSource="false" packagePrefix="Symfony\Bundle\MakerBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/maker-bundle/tests" isTestSource="true" packagePrefix="Symfony\Bundle\MakerBundle\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/mime/" isTestSource="false" packagePrefix="Symfony\Component\Mime\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/monolog-bridge/" isTestSource="false" packagePrefix="Symfony\Bridge\Monolog\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/monolog-bundle/" isTestSource="false" packagePrefix="Symfony\Bundle\MonologBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/notifier/" isTestSource="false" packagePrefix="Symfony\Component\Notifier\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/options-resolver/" isTestSource="false" packagePrefix="Symfony\Component\OptionsResolver\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/phpunit-bridge/" isTestSource="false" packagePrefix="Symfony\Bridge\PhpUnit\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/polyfill-intl-grapheme/" isTestSource="false" packagePrefix="Symfony\Polyfill\Intl\Grapheme\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/polyfill-intl-idn/" isTestSource="false" packagePrefix="Symfony\Polyfill\Intl\Idn\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/polyfill-intl-normalizer/" isTestSource="false" packagePrefix="Symfony\Polyfill\Intl\Normalizer\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/polyfill-mbstring/" isTestSource="false" packagePrefix="Symfony\Polyfill\Mbstring\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/polyfill-php73/" isTestSource="false" packagePrefix="Symfony\Polyfill\Php73\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/polyfill-php80/" isTestSource="false" packagePrefix="Symfony\Polyfill\Php80\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/process/" isTestSource="false" packagePrefix="Symfony\Component\Process\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/property-access/" isTestSource="false" packagePrefix="Symfony\Component\PropertyAccess\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/property-info/" isTestSource="false" packagePrefix="Symfony\Component\PropertyInfo\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/routing/" isTestSource="false" packagePrefix="Symfony\Component\Routing\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/security-bundle/" isTestSource="false" packagePrefix="Symfony\Bundle\SecurityBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/security-core/" isTestSource="false" packagePrefix="Symfony\Component\Security\Core\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/security-csrf/" isTestSource="false" packagePrefix="Symfony\Component\Security\Csrf\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/security-guard/" isTestSource="false" packagePrefix="Symfony\Component\Security\Guard\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/security-http/" isTestSource="false" packagePrefix="Symfony\Component\Security\Http\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/serializer/" isTestSource="false" packagePrefix="Symfony\Component\Serializer\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/service-contracts/" isTestSource="false" packagePrefix="Symfony\Contracts\Service\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/stopwatch/" isTestSource="false" packagePrefix="Symfony\Component\Stopwatch\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/string/" isTestSource="false" packagePrefix="Symfony\Component\String\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/translation-contracts/" isTestSource="false" packagePrefix="Symfony\Contracts\Translation\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/translation/" isTestSource="false" packagePrefix="Symfony\Component\Translation\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/twig-bridge/" isTestSource="false" packagePrefix="Symfony\Bridge\Twig\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/twig-bundle/" isTestSource="false" packagePrefix="Symfony\Bundle\TwigBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/validator/" isTestSource="false" packagePrefix="Symfony\Component\Validator\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/var-dumper/" isTestSource="false" packagePrefix="Symfony\Component\VarDumper\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/var-exporter/" isTestSource="false" packagePrefix="Symfony\Component\VarExporter\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/web-link/" isTestSource="false" packagePrefix="Symfony\Component\WebLink\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/web-profiler-bundle/" isTestSource="false" packagePrefix="Symfony\Bundle\WebProfilerBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfony/yaml/" isTestSource="false" packagePrefix="Symfony\Component\Yaml\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfonycasts/reset-password-bundle/src" isTestSource="false" packagePrefix="SymfonyCasts\Bundle\ResetPassword\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/symfonycasts/reset-password-bundle/tests" isTestSource="true" packagePrefix="SymfonyCasts\Bundle\ResetPassword\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/twig/extra-bundle/src" isTestSource="false" packagePrefix="Twig\Extra\TwigExtraBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/twig/extra-bundle/tests" isTestSource="true" packagePrefix="Twig\Extra\TwigExtraBundle\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/twig/twig/src" isTestSource="false" packagePrefix="Twig\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/twig/twig/tests" isTestSource="true" packagePrefix="Twig\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/vich/uploader-bundle/src" isTestSource="false" packagePrefix="Vich\UploaderBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/vich/uploader-bundle/tests" isTestSource="true" packagePrefix="Vich\UploaderBundle\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/vich/uploader-bundle/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/vich/uploader-bundle/tests/Fixtures/TestBundle/src" isTestSource="true" packagePrefix="Vich\TestBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/webmozart/assert/bin/src" isTestSource="true" packagePrefix="Webmozart\Assert\Bin\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/webmozart/assert/src" isTestSource="false" packagePrefix="Webmozart\Assert\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/webmozart/assert/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor09072024/webmozart/assert/tests" isTestSource="true" packagePrefix="Webmozart\Assert\Tests\" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/property-info" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/property-access" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/security-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/link" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/serializer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/stopwatch" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/security-csrf" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/security-core" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/security-http" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/security-guard" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/validator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/web-link" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/var-exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/twig-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/twig-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/web-profiler-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vich/uploader-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/twig/twig" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/annotations" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jms/metadata" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/twig/extra-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/doctrine-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/reflection" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/migrations" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/persistence" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/orm" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ocramius/proxy-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/config" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/debug-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/browser-kit" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/asset" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/cache-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/error-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dependency-injection" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/cocur/slugify" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dom-crawler" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/doctrine-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/framework-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/form" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/http-client-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/expression-language" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/flex" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/maker-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/mailer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/monolog-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/intl" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/notifier" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/monolog-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/phpunit-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-code" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-eventmanager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-eventmanager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-code" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-zendframework-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fzaninotto/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/data-fixtures" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/twig-pack" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfonycasts/reset-password-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/apache-pack" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

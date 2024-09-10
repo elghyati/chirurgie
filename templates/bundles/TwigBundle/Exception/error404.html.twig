@@ -1,0 +1,160 @@
+
+{#*************************************************************************#}
+{#*************************************************************************#}
+{# templates/bundles/TwigBundle/Exception/error404.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'error.404.title'|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'error.404.title'|trans }}</h1>
+    <p>{{ 'error.404.message'|trans }}</p>
+    <a href="{{ path('home_index') }}">Retour à l'accueil</a>
+{% endblock %}
+
+{#*************************************************************************#}
+{#*************************************************************************#}
+{#{% extends 'base.html.twig' %}#}
+
+{#{% block title %}Hello AboutusController!{% endblock %}#}
+
+{#{% block body %}#}
+
+{#    <h1>Page non trouvée</h1>#}
+
+{#    <p>#}
+{#        La page demandée est introuvable.#}
+{#        Paiement pour n'importe quelle URL faute d'orthographe ou#}
+{#        <a href="{{ path('homepage') }}">retour à la page d'accueil#}
+{#    </p>#}
+
+{#{% endblock %}#}
+
+
+
+{# <!DOCTYPE html> #}
+{# <html lang="en"> #}
+
+{#    <head> #}
+{#        <meta charset="utf-8" /> #}
+{#        <meta http-equiv="X-UA-Compatible" content="IE=edge"> #}
+{#        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui"> #}
+{#        <title>ChirurgieMed : ERROR</title> #}
+{#        <meta content="Error page" name="description" /> #}
+{#        <meta content="Nestecs" name="author" /> #}
+{#        <link rel="shortcut icon" href="{{ asset('admin/images/favicon.ico')}}"> #}
+
+{#        <link href="{{ asset('admin/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"> #}
+{#        <link href="{{ asset('admin/css/metismenu.min.css')}}" rel="stylesheet" type="text/css"> #}
+{#        <link href="{{ asset('admin/css/icons.css')}}" rel="stylesheet" type="text/css"> #}
+{#        <link href="{{ asset('admin/css/style.css')}}" rel="stylesheet" type="text/css"> #}
+{#    </head> #}
+
+{#    <body> #}
+
+{#        <!-- Background --> #}
+{#        <div class="account-pages"></div> #}
+
+{#        <!-- Begin page --> #}
+{#        <div class="wrapper-page"> #}
+{#            <div class="card"> #}
+{#                <div class="card-block"> #}
+
+{#                    <div class="ex-page-content text-center"> #}
+{#                        <h1 class="text-dark">404!</h1> #}
+{#                        <h4 class="">Sorry, page not found</h4><br> #}
+
+{#                        <a class="btn btn-info mb-5 waves-effect waves-light" href="index.html"><i class="mdi mdi-home"></i> Back to Dashboard</a> #}
+{#                    </div> #}
+
+{#                </div> #}
+{#            </div> #}
+
+{#            <div class="m-t-40 text-center"> #}
+{#                <p class="text-muted">© 2020 Chirurgie</p> #}
+{#            </div> #}
+
+{#        </div> #}
+
+
+
+{#        <!-- jQuery  --> #}
+{#         <link href="{{ asset('admin/js/jquery.min.js')}}" rel="stylesheet" type="text/css"> #}
+{#         <link href="{{ asset('admin/js/bootstrap.bundle.min.js')}}" rel="stylesheet" type="text/css"> #}
+{#         <link href="{{ asset('admin/js/metisMenu.min.js')}}" rel="stylesheet" type="text/css"> #}
+{#         <link href="{{ asset('admin/js/jquery.slimscroll.js')}}" rel="stylesheet" type="text/css"> #}
+{#         <link href="{{ asset('admin/js/waves.min.js')}}" rel="stylesheet" type="text/css"> #}
+{#         <script src="{{ asset('admin/plugins/jquery-sparkline/jquery.sparkline.min.js')}}" ></script> #}
+
+
+{#        <!-- App js --> #}
+{#         <script src="{{ asset('admin/js/app.js')}}" ></script> #}
+
+{#    </body> #}
+
+{# </html> #}
+{# {% extends 'base.html.twig' %}# } #}
+{# <!doctype html> #}
+{# <html> #}
+{#    <head> #}
+{#        <title>Page introuvable !</title> #}
+{#        <!-- Bootstrap CSS --> #}
+{#        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> #}
+{#        <!-- Site CSS --> #}
+{#        <link rel="stylesheet" href="{{ asset('css/style.css') }}"> #}
+{#        <!-- Responsive CSS --> #}
+{#        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}"> #}
+{#        <!-- Custom CSS --> #}
+{#        <link rel="stylesheet" href="{{ asset('css/custom.css') }}">     #}
+{#        <!-- FontAwsome CSS --> #}
+{#        <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/> #}
+{#        #}{#        <link rel="stylesheet" href="{{ asset('css/all.min.css') }}"/># } #}
+{#        <link rel="stylesheet" href="{{ asset('css/all.css') }}">     #}
+{#    </head> #}
+{#    <body> #}
+{#        #}{# <div class="container alert-box alert-info"> #}
+{#            <h1>Page n'a pas été ctrouvée</h1> #}
+{#            <h3>Désolé, la page que vous chercher n'éxiste pas dans le serveur. Elle a été supprimée ou vous avez entré une adresse incorrecte. #}
+{#                S'il vous plait, vérifier si l'adresse utilisée est correcte puis réessayez.</h3> #}
+{#        </div> #}
+{#        <div class="all-title-box"> #}
+{#            <div class="container"> #}
+{#                <div class="row"> #}
+{#                    <div class="col-lg-12"> #}
+{#                        <h2>Page n'a pas été trouvée</h2> #}
+{#                        #}{# <ul class="breadcrumb"> #}
+{#                            <li class="breadcrumb-item"><a href="#">Home</a></li> #}
+{#                            <li class="breadcrumb-item active">A PROPOS</li> #}
+{#                        </ul># } #}
+{# </div> #}
+{# </div> #}
+{# </div> #}
+{# </div> #}
+{# # }       #}
+{# <div class="about-box-main"> #}
+{#    <div class="container my-5"> #}
+{#        <div class="row"> #}
+{#            <div class="col-lg-9"> #}
+{#                <h1 class="noo-sh-title-top">Page n'a pas été trouvée</h1> #}
+{#                <h2 class="my-5">Désolé, la page que vous chercher n'éxiste pas dans le serveur. Elle a été supprimée ou vous avez entré une adresse incorrecte. #}
+{#                    S'il vous plait, vérifier si l'adresse utilisée est correcte puis réessayez.</h2> #}
+{#                <a class="btn hvr-hover my-3" href="{{ path('home_page') }}">Page d'accueil</a> #}
+{#            </div> #}
+{#        </div> #}
+{#    </div> #}
+
+{#    <!-- ALL JS FILES --> #}
+{#    <script src="{{ asset('js/jquery-3.2.1.min.js')}}"></script> #}
+{#    <script src="{{ asset('js/popper.min.js')}}"></script> #}
+{#    <script src="{{ asset('js/bootstrap.min.js')}}"></script> #}
+{#    <!-- ALL PLUGINS --> #}
+{# </body> #}
+
+{# </html> #}
+
+{# {% block title %}Page introuvable !{% endblock %} #}
+
+{# {% block body %} #}
+
+
+{# {% endblock %} #}

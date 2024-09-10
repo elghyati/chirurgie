@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name=".gitignore" server="ftp.cluster028.hosting.ovh.net/chirurgiemed/" local="132394696057913066" remote="132425348400000000" Dst="2" />
+<file name="ClientRepository.php" server="ftp.cluster028.hosting.ovh.net/chirurgiemed/" local="132394719752447104" remote="132425348400000000" Dst="2" />
+<file name="ArticleRepository.php" server="ftp.cluster028.hosting.ovh.net/chirurgiemed/" local="132394719344971778" remote="132425348400000000" Dst="2" />
+<file name="CommentRepository.php" server="ftp.cluster028.hosting.ovh.net/chirurgiemed/" local="132394719752536850" remote="132425348400000000" Dst="2" />
+<file name="FamilleRepository.php" server="ftp.cluster028.hosting.ovh.net/chirurgiemed/" local="132394719753773555" remote="132425348400000000" Dst="2" />
+<file name="EmployeRepository.php" server="ftp.cluster028.hosting.ovh.net/chirurgiemed/" local="132394719753663835" remote="132425348400000000" Dst="2" />
+<file name="OrderDetailRepository.php" server="ftp.cluster028.hosting.ovh.net/chirurgiemed/" local="132394719754012904" remote="132425348400000000" Dst="2" />
+<file name="OrderRepository.php" server="ftp.cluster028.hosting.ovh.net/chirurgiemed/" local="132394719754112637" remote="132425348400000000" Dst="2" />
+<file name="ResetPasswordRequestRepository.php" server="ftp.cluster028.hosting.ovh.net/chirurgiemed/" local="132421432687202683" remote="132425348400000000" Dst="2" />
+<file name="RoleRepository.php" server="ftp.cluster028.hosting.ovh.net/chirurgiemed/" local="132394719754212369" remote="132425348400000000" Dst="2" />
+<file name="SizeRepository.php" server="ftp.cluster028.hosting.ovh.net/chirurgiemed/" local="132394719754282188" remote="132425348400000000" Dst="2" />
+<file name="UserRepository.php" server="ftp.cluster028.hosting.ovh.net/chirurgiemed/" local="132394719754740954" remote="132425348400000000" Dst="2" />
+<file name="ImageRepository.php" server="ftp.cluster028.hosting.ovh.net/chirurgiemed/" local="132394719753893225" remote="132425349600000000" Dst="2" />
+<file name="SousFamilleRepository.php" server="ftp.cluster028.hosting.ovh.net/chirurgiemed/" local="132394719754631248" remote="132425349600000000" Dst="2" />
+</dwsync>

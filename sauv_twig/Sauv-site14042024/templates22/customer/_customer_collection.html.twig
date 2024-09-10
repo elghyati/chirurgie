@@ -1,0 +1,91 @@
+{% block _customer_widget %}
+    <div class="row">
+        <div class="col-2">
+            {{ form_label(form.civilite) }}
+            {{ form_widget(form.civilite) }}
+            {{ form_errors(form.civilite) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.firstName) }}
+            {{ form_widget(form.firstName) }}
+            {{ form_errors(form.firstName) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.lastName) }}
+            {{ form_widget(form.lastName) }}
+            {{ form_errors(form.lastName) }}
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col">
+            {{ form_label(form.email) }}
+            {{ form_widget(form.email) }}
+            {{ form_errors(form.email) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.hash) }}
+            {{ form_widget(form.hash) }}
+            {{ form_errors(form.hash) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.introduction) }}
+            {{ form_widget(form.introduction) }}
+            {{ form_errors(form.introduction) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.job) }}
+            {{ form_widget(form.job) }}
+            {{ form_errors(form.job) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.company) }}
+            {{ form_widget(form.company) }}
+            {{ form_errors(form.company) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.adresse) }}
+            {{ form_widget(form.adresse) }}
+            {{ form_errors(form.adresse) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.ville) }}
+            {{ form_widget(form.ville) }}
+            {{ form_errors(form.ville) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.codePostal) }}
+            {{ form_widget(form.codePostal) }}
+            {{ form_errors(form.codePostal) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.tel) }}
+            {{ form_widget(form.tel) }}
+            {{ form_errors(form.tel) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.gsm) }}
+            {{ form_widget(form.gsm) }}
+            {{ form_errors(form.gsm) }}
+        </div>
+    </div>
+
+    {#<div class="col">
+        {{ form_label(form.) }}
+        {{ form_widget(form.) }}
+        {{ form_errors(form.) }}
+    </div>
+    #}
+{% endblock %}

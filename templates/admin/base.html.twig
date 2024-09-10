@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui,shrink-to-fit=no">
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Themesbrand" name="author" />
+        <title>Chirurgie-Med::{% block title %}{% endblock %}</title>
+        <link rel="shortcut icon" href="{{ asset('admin/images/favicon.ico')}}">
+
+        <link rel="stylesheet" href="{{ asset('admin/plugins/morris/morris.css')}}">
+
+        <link href="{{ asset('admin/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('admin/css/metismenu.min.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('admin/css/icons.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('admin/css/style.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('admin/plugins/select2/css/select2.min.css')}}" rel="stylesheet" type="text/css">
+
+        <!-- DataTables -->
+        <link href="{{ asset('admin/plugins/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('admin/plugins/datatables/buttons.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+        <!-- Responsive datatable examples -->
+        <link href="{{ asset('admin/plugins/datatables/responsive.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+
+        {% block stylesheets %} {% endblock %}
+    </head>
+
+    <body>
+        <!-- Begin page -->
+        <div id="wrapper">
+            {% include 'admin/partials/header.html.twig' %}
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                {% block body %}{% endblock %}
+                {% include 'admin/partials/footer.html.twig' %}
+            </div>
+
+
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- END wrapper -->
+        <!-- jQuery  -->
+        <script src="{{ asset('admin/js/jquery.min.js')}}"></script>
+        <script src="{{ asset('admin/plugins/select2/js/select2.min.js')}}"></script>
+        <script src="{{ asset('admin/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{ asset('admin/js/metisMenu.min.js')}}"></script>
+        <script src="{{ asset('admin/js/jquery.slimscroll.js')}}"></script>
+        <script src="{{ asset('admin/js/waves.min.js')}}"></script>
+
+        <script src="{{ asset('admin/plugins/jquery-sparkline/jquery.sparkline.min.js')}}"></script>
+
+        <!-- Peity JS -->
+        <script src="{{ asset('admin/plugins/peity/jquery.peity.min.js')}}"></script>
+
+        <script src="{{ asset('admin/plugins/morris/morris.min.js')}}"></script>
+        <script src="{{ asset('admin/plugins/raphael/raphael-min.js')}}"></script>
+
+        <script src="{{ asset('admin/pages/dashboard.js')}}"></script>
+
+        <!-- App js -->
+        <script src="{{ asset('admin/js/app.js')}}"></script>
+
+
+        <!-- Required datatable js -->
+        <script src="{{ asset('admin/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('admin/plugins/datatables/dataTables.bootstrap4.min.js') }}"></script>
+        <!-- Buttons examples -->
+        <script src="{{ asset('admin/plugins/datatables/dataTables.buttons.min.js') }}"></script>
+        <script src="{{ asset('admin/plugins/datatables/buttons.bootstrap4.min.js') }}"></script>
+        <script src="{{ asset('admin/plugins/datatables/jszip.min.js') }}"></script>
+        <script src="{{ asset('admin/plugins/datatables/pdfmake.min.js') }}"></script>
+        <script src="{{ asset('admin/plugins/datatables/vfs_fonts.js') }}"></script>
+        <script src="{{ asset('admin/plugins/datatables/buttons.html5.min.js') }}"></script>
+        <script src="{{ asset('admin/plugins/datatables/buttons.print.min.js') }}"></script>
+        <script src="{{ asset('admin/plugins/datatables/buttons.colVis.min.js') }}"></script>
+        <!-- Responsive examples -->
+        <script src="{{ asset('admin/plugins/datatables/dataTables.responsive.min.js') }}"></script>
+        <script src="{{ asset('admin/plugins/datatables/responsive.bootstrap4.min.js') }}"></script>
+
+        <!-- Datatable init js -->
+        <script src="{{ asset('admin/pages/datatables.init.js') }}"></script>
+
+
+        {% block javascripts %}{% endblock %}
+
+    </body>
+</html>

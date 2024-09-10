@@ -1,0 +1,51 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Liste des commandes{% endblock %}
+
+{% block body %}
+    <div>
+        <h1 class="">Liste des commandes</h1>
+    </div>
+    <hr />
+    <p class="badge-danger">En cours de conception</p>
+    <br />
+    <div class="table-responsive">
+        {#        <table class="table  table-striped  table-hover">#}
+        <table class="table  table-hover">
+            <thead class="table-dark">
+            <th>ID</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Date validation</th>
+            <th>Client</th>
+            <th></th>
+            </thead>
+            <tbody>
+
+                {% for commande in commandes %}
+                    <tr border-bottom>
+                        <td> {{ commande.id }}</td>
+                        <td> {{ commande.date | date('d-m-Y')}}</td>
+                        <td> {{ commande.status }}</td>
+                        <td> {{ commande.dateValidation | date('d-m-Y') }}</td>
+                        <td> {{ commande.client.lastName ~ ' ' ~ commande.client.firstName}}</td>
+                        <td>
+                            <a class="btn btn-primary" href="{{ path('commande_edit', {id: commande.id}) }}">edit</a>
+                            <a class="btn btn-danger" href="{{ path('commande_delete', {id: commande.id}) }}">delete</a>
+
+                            {# <a href="{{ path('commande_edit', {id: commande.id}) }}"><button><span class="glyphicon glyphicon-search"></span>Search</button></a>#}
+                            {# <a class="btn btn-danger" href="{{ path('commande_delete', {id: commande.id}) }}">delete</a>#}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="btn btn-success" href="{{ path('commande_create') }}" style="margin-top: 15px;">Ajout commande</a>
+
+    </div>
+
+    {#    <div class="card col-1" role="alert">#}
+    {#        <a title="Ajouter un Commande" class="nav-link" href="{{ path('commande_create') }}">+</a>#}
+    {#    </div>#}
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'admin/base.html.twig' %}
+
+{#{% form_theme form with ['admin/article/_article_collection.html.twig'] %}
+{% form_theme form.images with ['admin/article/_image_variant_collection.html.twig'] %}
+{% form_theme form.images with ['admin/article/_image_article_collection.html.twig'] %}
+{% form_theme form.variants with ['admin/article/_variant_collection.html.twig'] %}
+#}
+{% block title %}Ajout d'un nouveau status !{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Administration des status</h4>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ path('admin_dashboard_index') }}">ChirurgieMed</a></li>
+                            <li class="breadcrumb-item"><a href="{{ path('admin_order_status_index') }}">Status</a></li>
+                            <li class="breadcrumb-item active">Création</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+            <div class="page-content-wrapper">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card m-b-20">
+                            <div class="card-body">
+                                <h4 class="mb-3 header-title">Ajout d'un nouveau status</h4>
+                                {{ include('admin/order_status/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+                                <div class="form-inline align-items-lg-center my-3">
+                                    <a class="btn btn-success mr-3" href="{{ path('admin_order_status_index') }}"><i class="fas fa-chevron-left"></i> Retour à la liste</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+            </div>
+            <!-- end page content-->
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+{% endblock %}
